@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function useReveal() {
   const ref = useRef<HTMLElement>(null)
@@ -17,6 +18,7 @@ function useReveal() {
 
 export default function Work() {
   const sectionRef = useReveal() as React.RefObject<HTMLElement>
+  const navigate = useNavigate()
 
   return (
     <section
@@ -37,11 +39,10 @@ export default function Work() {
 
       <div className="bento">
         {/* 01 RAQAM */}
-        <article className="card b-raqam bg-raqam rv d1" style={{cursor:'none'}}>
-          <a href="https://priuxd.figma.site/#case-study-raqam-bank" target="_blank" rel="noopener noreferrer" aria-label="Raqam case study" style={{position:'absolute',inset:0,zIndex:0,cursor:'none'}} />
+        <article className="card b-raqam bg-raqam rv d1" style={{cursor:'none'}} onClick={()=>navigate('/case-study/raqam')}>
           <div className="cl" /><div className="cn">01</div>
-          <a href="https://priuxd.figma.site/#case-study-raqam-bank" target="_blank" rel="noopener noreferrer" className="ca" aria-label="Raqam case study" style={{zIndex:2}}>↗</a>
-          <div className="ci" style={{zIndex:1}}>
+          <button onClick={e=>{e.stopPropagation();navigate('/case-study/raqam')}} className="ca" aria-label="Raqam case study" style={{zIndex:2,border:'none',background:'transparent',cursor:'none'}}>↗</button>
+          <div className="ci" style={{zIndex:1,pointerEvents:'none'}}>
             <span className="ctag">Mobile Banking · Fintech · UAE</span>
             <h2 className="ctitle">Raqam Bank — Digital Banking,<br />the Human Touch</h2>
             <p className="cdesc">Reimagining mobile banking for UAE's 88% expat population — transparent international transfers, AI-powered spending insights, enterprise operations dashboard.</p>

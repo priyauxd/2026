@@ -5,7 +5,10 @@
       "Bash(npm install)",
       "Bash(npx tsc --noEmit)",
       "mcp__Claude_Preview__preview_start",
-      "Bash(/Users/priyamvada/Desktop/portfolio/src/components/Hero.tsx:*)"
+      "Bash(/Users/priyamvada/Desktop/portfolio/src/components/Hero.tsx:*)",
+      "WebFetch(domain:priuxd.figma.site)",
+      "Bash(npm install react-router-dom)",
+      "Bash(npm run build)"
     ]
   }
 }
