@@ -86,7 +86,7 @@ export default function CaseStudyRaqam() {
           {/* MOCKUP IMAGE */}
           <div style={{ position: 'relative', zIndex: 1, width: '100%', maxWidth: 900, margin: '0 auto' }}>
             <img
-              src="/images/raqam-mockup.png"
+              src={`${import.meta.env.BASE_URL}images/raqam-mockup.png`}
               alt="Raqam Bank app screens — home dashboard, splash screen, and send money flow"
               style={{ width: '100%', objectFit: 'contain', display: 'block', filter: 'drop-shadow(0 40px 80px rgba(0,0,0,.8))' }}
             />
