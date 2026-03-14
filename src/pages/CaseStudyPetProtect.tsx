@@ -460,20 +460,11 @@ export default function CaseStudyPetProtect() {
 
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24, marginBottom: 24 }}>
                 {[
-                  { label: 'Front', desc: 'Oslo logo with heart icon — brand recognition at a glance.' },
-                  { label: 'Back', desc: 'Unique TAG ID field — links the physical tag to the digital policy.' },
-                ].map(({ label, desc }) => (
+                  { label: 'Front', desc: 'Oslo logo with heart icon — brand recognition at a glance.', img: `${import.meta.env.BASE_URL}images/oslo-tag-front.svg` },
+                  { label: 'Back', desc: 'Unique TAG ID field — links the physical tag to the digital policy.', img: `${import.meta.env.BASE_URL}images/oslo-tag-back.svg` },
+                ].map(({ label, desc, img }) => (
                   <div key={label} style={{ background: 'var(--s2)', border: '1px solid var(--bdr2)', borderRadius: 3, padding: 28, textAlign: 'center' }}>
-                    <div style={{ width: 100, height: 100, borderRadius: '50%', background: '#5BB9C4', margin: '0 auto 20px', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 0 0 8px rgba(180,180,180,.3), inset 0 -2px 6px rgba(0,0,0,.1)' }}>
-                      {label === 'Front' ? (
-                        <span style={{ fontFamily: '"Nunito", sans-serif', fontWeight: 700, fontSize: '1.1rem', color: '#fff' }}>Oslo</span>
-                      ) : (
-                        <div style={{ textAlign: 'center' }}>
-                          <div style={{ fontFamily: '"Nunito", sans-serif', fontWeight: 700, fontSize: '.7rem', color: '#fff', marginBottom: 4 }}>TAG ID:</div>
-                          <div style={{ width: 48, height: 12, borderRadius: 2, background: '#fff', margin: '0 auto' }} />
-                        </div>
-                      )}
-                    </div>
+                    <img src={img} alt={`Oslo pet tag — ${label}`} style={{ width: 180, height: 180, margin: '0 auto 20px', display: 'block', objectFit: 'contain' }} />
                     <div style={{ fontSize: '.72rem', fontWeight: 500, color: 'var(--white)', marginBottom: 6 }}>{label}</div>
                     <div style={{ fontSize: '.75rem', color: 'var(--muted)', lineHeight: 1.65 }}>{desc}</div>
                   </div>
