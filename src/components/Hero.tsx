@@ -3,7 +3,7 @@ export default function Hero() {
     <section
       id="home"
       style={{
-        minHeight:'100vh',
+        minHeight:'calc(100vh - 38px)',
         display:'flex',
         flexDirection:'column',
         alignItems:'center',
