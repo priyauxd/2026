@@ -463,6 +463,188 @@ export default function CaseStudyAICallCenter() {
           </div>
         </section>
 
+        {/* ── SCORECARD DASHBOARD ── */}
+        <section style={{ maxWidth: 1100, margin: '0 auto', padding: '100px var(--pad) 0', borderTop: '1px solid var(--bdr2)' }}>
+          <h2 style={{ fontFamily: '"Cormorant Garamond",Georgia,serif', fontSize: 'clamp(1.5rem,2.8vw,2.4rem)', fontWeight: 300, lineHeight: 1.1, marginBottom: 12, color: 'var(--white)' }}>
+            AI Scorecard Dashboard
+          </h2>
+          <p style={{ fontSize: '.88rem', lineHeight: 1.8, color: 'var(--muted)', marginBottom: 48, maxWidth: 760 }}>
+            The central intelligence hub — combining real-time sentiment analysis, scorecard performance tracking, agent talk/listen ratios, and a live call feed into a single unified view.
+          </p>
+
+          {/* Dashboard mockup */}
+          <div style={{ background: 'var(--s1)', border: '1px solid var(--bdr2)', borderRadius: 14, overflow: 'hidden', boxShadow: '0 25px 60px rgba(0,0,0,.5)' }}>
+            {/* Header bar */}
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '12px 20px', borderBottom: '1px solid var(--bdr2)', background: 'var(--s2)' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                <div style={{ width: 28, height: 28, borderRadius: '50%', background: 'rgba(201,168,76,.12)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <span style={{ color: 'var(--gold)', fontSize: '.7rem', fontWeight: 700 }}>Z</span>
+                </div>
+                <span style={{ fontSize: '.82rem', fontWeight: 500, color: 'var(--white)' }}>ZIWO Intelligence</span>
+              </div>
+              <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+                <span style={{ fontSize: '.6rem', fontWeight: 500, letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--gold)', background: 'rgba(201,168,76,.08)', padding: '4px 10px', borderRadius: 4 }}>Voice</span>
+                <span style={{ fontSize: '.6rem', fontWeight: 500, letterSpacing: '.1em', textTransform: 'uppercase', color: '#4ade80', background: 'rgba(74,222,128,.08)', padding: '4px 10px', borderRadius: 4 }}>Beta</span>
+                <span style={{ fontSize: '.65rem', color: 'var(--muted)', background: 'var(--s3)', padding: '5px 12px', borderRadius: 4, border: '1px solid var(--bdr2)' }}>Filter</span>
+                <span style={{ fontSize: '.65rem', color: 'var(--muted)', background: 'var(--s3)', padding: '5px 12px', borderRadius: 4, border: '1px solid var(--bdr2)' }}>Aug 01, 2023 &ndash; Today</span>
+                <span style={{ fontSize: '.65rem', fontWeight: 500, color: 'var(--black)', background: 'var(--gold)', padding: '5px 14px', borderRadius: 4 }}>Scorecard</span>
+              </div>
+            </div>
+
+            {/* Dashboard body */}
+            <div style={{ display: 'grid', gridTemplateColumns: '230px 1fr', minHeight: 520 }}>
+              {/* Left KPI panel */}
+              <div style={{ padding: 14, display: 'flex', flexDirection: 'column', gap: 12, borderRight: '1px solid var(--bdr2)', background: 'rgba(240,237,230,.015)' }}>
+                {/* Sentiment */}
+                <div style={{ background: 'var(--s2)', border: '1px solid var(--bdr2)', borderRadius: 10, padding: '14px 16px' }}>
+                  <div style={{ fontSize: '.72rem', fontWeight: 500, color: 'var(--white)', marginBottom: 16, borderBottom: '1px solid var(--bdr2)', paddingBottom: 10 }}>Overall Sentiment</div>
+                  <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 14 }}>
+                    <div style={{ width: 80, height: 80, borderRadius: '50%', background: `conic-gradient(#4ade80 0% 60%, var(--s3) 60% 80%, #ef4444 80% 100%)`, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                      <div style={{ width: 52, height: 52, borderRadius: '50%', background: 'var(--s2)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem' }}>
+                        &#128526;
+                      </div>
+                    </div>
+                  </div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                    {[['Positive','60%','#4ade80'],['Neutral','20%','var(--muted)'],['Negative','20%','#ef4444']].map(([label,val,clr]) => (
+                      <div key={label} style={{ textAlign: 'center' }}>
+                        <div style={{ fontSize: '.62rem', fontWeight: 500, color: 'var(--white)', marginBottom: 2 }}>{label}</div>
+                        <div style={{ fontSize: '.6rem', color: clr as string }}>{val}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Scorecard Performance */}
+                <div style={{ background: 'var(--s2)', border: '1px solid var(--gold)', borderRadius: 10, padding: '14px 16px' }}>
+                  <div style={{ fontSize: '.72rem', fontWeight: 500, color: 'var(--white)', marginBottom: 16, borderBottom: '1px solid var(--bdr2)', paddingBottom: 10 }}>Scorecard Performance</div>
+                  <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+                    {[['40%','Passing Calls','#4ade80','rgba(74,222,128,.12)'],['50%','Avg. Score','var(--gold)','rgba(201,168,76,.12)']].map(([val,label,clr,bg]) => (
+                      <div key={label} style={{ textAlign: 'center' }}>
+                        <div style={{ width: 48, height: 48, borderRadius: '12px 12px 12px 0', background: bg as string, display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 8px', fontSize: '.9rem', fontWeight: 700, color: clr as string }}>{val}</div>
+                        <div style={{ fontSize: '.6rem', fontWeight: 500, color: 'var(--white)' }}>{label}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Talk/Listen */}
+                <div style={{ background: 'var(--s2)', border: '1px solid var(--bdr2)', borderRadius: 10, padding: '14px 16px' }}>
+                  <div style={{ fontSize: '.72rem', fontWeight: 500, color: 'var(--white)', marginBottom: 16, borderBottom: '1px solid var(--bdr2)', paddingBottom: 10 }}>Agent Talk/Listen Ratio</div>
+                  <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 14 }}>
+                    <div style={{ width: 80, height: 80, borderRadius: '50%', background: `conic-gradient(var(--gold) 0% 20%, var(--s3) 20% 100%)`, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                      <div style={{ width: 52, height: 52, borderRadius: '50%', background: 'var(--s2)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '.65rem', color: 'var(--muted)' }}>
+                        &#128172;
+                      </div>
+                    </div>
+                  </div>
+                  <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+                    {[['Talk','20%'],['Listen','80%']].map(([label,val]) => (
+                      <div key={label} style={{ textAlign: 'center' }}>
+                        <div style={{ fontSize: '.62rem', fontWeight: 500, color: 'var(--white)', marginBottom: 2 }}>{label}</div>
+                        <div style={{ fontSize: '.6rem', color: 'var(--muted)' }}>{val}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Most Engaged Agents */}
+                <div style={{ background: 'var(--s2)', border: '1px solid var(--bdr2)', borderRadius: 10, padding: '14px 16px' }}>
+                  <div style={{ fontSize: '.72rem', fontWeight: 500, color: 'var(--white)', marginBottom: 12, borderBottom: '1px solid var(--bdr2)', paddingBottom: 10 }}>Most Engaged Agents</div>
+                  {[['T','Tyrone S.','30%'],['L','Lucy P.','10%'],['K','Kent M.','10%'],['B','Brett B.','10%'],['K','Kyle K.','10%']].map(([init,name,pct]) => (
+                    <div key={name} style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '5px 0', borderBottom: '1px solid var(--bdr2)' }}>
+                      <div style={{ width: 18, height: 18, borderRadius: '50%', background: 'var(--s3)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '.5rem', fontWeight: 600, color: 'var(--white)', flexShrink: 0 }}>{init}</div>
+                      <span style={{ fontSize: '.6rem', color: 'var(--muted)', flex: 1 }}>{name}</span>
+                      <span style={{ fontSize: '.6rem', color: 'var(--muted)' }}>{pct}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Right content */}
+              <div style={{ display: 'flex', flexDirection: 'column' }}>
+                {/* Trends chart area */}
+                <div style={{ flex: 1, padding: '20px 24px', borderBottom: '1px solid var(--bdr2)' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
+                    <div style={{ display: 'flex', gap: 8 }}>
+                      <span style={{ fontSize: '.62rem', color: 'var(--gold)', background: 'rgba(201,168,76,.08)', padding: '4px 10px', borderRadius: 12 }}>Over time</span>
+                      <span style={{ fontSize: '.62rem', color: 'var(--muted)', background: 'var(--s3)', padding: '4px 10px', borderRadius: 12 }}>By Agent</span>
+                    </div>
+                    <div style={{ display: 'flex', gap: 0, border: '1px solid var(--bdr2)', borderRadius: 6, overflow: 'hidden' }}>
+                      {['Day','Week','Month'].map((p, i) => (
+                        <span key={p} style={{ fontSize: '.6rem', padding: '5px 10px', color: i === 0 ? 'var(--gold)' : 'var(--muted)', background: i === 0 ? 'rgba(201,168,76,.08)' : 'transparent', borderRight: i < 2 ? '1px solid var(--bdr2)' : 'none' }}>{p}</span>
+                      ))}
+                    </div>
+                  </div>
+                  {/* Legend */}
+                  <div style={{ display: 'flex', gap: 16, marginBottom: 16 }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}><div style={{ width: 8, height: 8, borderRadius: '50%', background: '#4ade80' }} /><span style={{ fontSize: '.62rem', color: 'var(--muted)' }}>Passing Score</span></div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}><div style={{ width: 8, height: 8, borderRadius: '50%', background: '#ef4444' }} /><span style={{ fontSize: '.62rem', color: 'var(--muted)' }}>Average Score</span></div>
+                    <span style={{ fontSize: '.62rem', color: '#ffb547' }}>- Config Change</span>
+                  </div>
+                  {/* Chart visualization */}
+                  <div style={{ position: 'relative', height: 200, background: 'var(--s2)', borderRadius: 8, border: '1px solid var(--bdr2)', overflow: 'hidden' }}>
+                    {/* Y axis labels */}
+                    <div style={{ position: 'absolute', left: 8, top: 12, bottom: 28, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                      {['100%','80%','60%','40%','20%','0'].map(v => (
+                        <span key={v} style={{ fontSize: '.5rem', color: 'var(--dim)' }}>{v}</span>
+                      ))}
+                    </div>
+                    {/* Grid lines */}
+                    {[0,1,2,3,4].map(i => (
+                      <div key={i} style={{ position: 'absolute', left: 36, right: 8, top: `${12 + i * 32}px`, height: 1, background: 'var(--bdr2)' }} />
+                    ))}
+                    {/* Green line (passing score) */}
+                    <svg style={{ position: 'absolute', left: 36, top: 0, width: 'calc(100% - 44px)', height: '100%' }} viewBox="0 0 700 200" preserveAspectRatio="none">
+                      <polyline points="0,100 50,95 100,110 150,108 200,115 250,120 300,105 350,100 400,110 450,130 500,140 550,135 600,120 650,110 700,95" fill="none" stroke="#4ade80" strokeWidth="2" opacity=".7" />
+                      <polyline points="0,130 50,125 100,120 150,130 200,135 250,140 300,130 350,125 400,135 450,150 500,155 550,145 600,135 650,125 700,120" fill="none" stroke="#ef4444" strokeWidth="2" opacity=".7" />
+                    </svg>
+                    {/* Config change markers */}
+                    <div style={{ position: 'absolute', left: '35%', top: 10, bottom: 28, borderLeft: '1px dashed #ffb547', opacity: .5 }} />
+                    <div style={{ position: 'absolute', left: '60%', top: 10, bottom: 28, borderLeft: '1px dashed #ffb547', opacity: .5 }} />
+                    {/* X axis */}
+                    <div style={{ position: 'absolute', left: 36, right: 8, bottom: 8, display: 'flex', justifyContent: 'space-between' }}>
+                      {['12AM','3AM','6AM','9AM','12PM','3PM','6PM','9PM'].map(t => (
+                        <span key={t} style={{ fontSize: '.45rem', color: 'var(--dim)' }}>{t}</span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Calls table */}
+                <div style={{ padding: '16px 24px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14 }}>
+                    <span style={{ fontSize: '.82rem', fontWeight: 500, color: 'var(--white)' }}>30 Calls</span>
+                    <span style={{ fontSize: '.6rem', color: 'var(--gold)', background: 'rgba(201,168,76,.08)', padding: '3px 10px', borderRadius: 12 }}>Inbound</span>
+                    <span style={{ fontSize: '.6rem', color: 'var(--muted)' }}>Outbound</span>
+                  </div>
+                  {/* Table header */}
+                  <div style={{ display: 'grid', gridTemplateColumns: '1.5fr 1.2fr 1.2fr .8fr .7fr .7fr', padding: '8px 0', borderBottom: '1px solid var(--bdr2)' }}>
+                    {['Call','Contact','Agent / CC','Sentiment','Score','Duration'].map(h => (
+                      <span key={h} style={{ fontSize: '.58rem', fontWeight: 500, letterSpacing: '.06em', textTransform: 'uppercase', color: 'var(--muted)' }}>{h}</span>
+                    ))}
+                  </div>
+                  {/* Table rows */}
+                  {[
+                    ['Outbound · 17 Dec, 03:46','Jessica Morgan','+971 888...877','&#128544;','Fail · 20%','00:00:00'],
+                    ['Outbound · 17 Dec, 03:46','Perry Armstrong','+971 888...877','&#128522;','Pass · 90%','00:00:00'],
+                    ['Outbound · 17 Dec, 03:46','Miss Lila Ortiz','+971 888...877','&#128544;','Fail · 20%','00:00:00'],
+                  ].map((row, ri) => (
+                    <div key={ri} style={{ display: 'grid', gridTemplateColumns: '1.5fr 1.2fr 1.2fr .8fr .7fr .7fr', padding: '10px 0', borderBottom: '1px solid var(--bdr2)', alignItems: 'center' }}>
+                      <span style={{ fontSize: '.62rem', color: 'var(--muted)' }}>{row[0]}</span>
+                      <span style={{ fontSize: '.62rem', color: 'var(--white)' }}>{row[1]}</span>
+                      <span style={{ fontSize: '.62rem', color: 'var(--muted)' }}>{row[2]}</span>
+                      <span style={{ fontSize: '.8rem' }} dangerouslySetInnerHTML={{ __html: row[3] }} />
+                      <span style={{ fontSize: '.58rem', fontWeight: 500, color: row[4].startsWith('Pass') ? '#4ade80' : '#ef4444', background: row[4].startsWith('Pass') ? 'rgba(74,222,128,.1)' : 'rgba(239,68,68,.1)', padding: '2px 8px', borderRadius: 4, width: 'fit-content' }}>{row[4]}</span>
+                      <span style={{ fontSize: '.62rem', color: 'var(--muted)' }}>{row[5]}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ── CALL DETAILS VIEW ── */}
         <section style={{ maxWidth: 1100, margin: '0 auto', padding: '100px var(--pad) 0', borderTop: '1px solid var(--bdr2)' }}>
           <h2 style={{ fontFamily: '"Cormorant Garamond",Georgia,serif', fontSize: 'clamp(1.5rem,2.8vw,2.4rem)', fontWeight: 300, lineHeight: 1.1, marginBottom: 12, color: 'var(--white)' }}>
