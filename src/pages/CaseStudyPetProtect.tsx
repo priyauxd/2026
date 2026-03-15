@@ -265,12 +265,6 @@ export default function CaseStudyPetProtect() {
             </div>
           </div>
 
-          {/* Brand mark */}
-          <div style={{ position: 'relative', zIndex: 1, display: 'flex', gap: 32, justifyContent: 'center', alignItems: 'center', marginTop: 16 }}>
-            <div style={{ width: 120, height: 120, borderRadius: '50%', background: '#5BB9C4', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 32px 64px -12px rgba(91,185,196,.3)' }}>
-              <span style={{ fontFamily: '"Nunito", sans-serif', fontWeight: 700, fontSize: '1.4rem', color: '#fff', letterSpacing: '.02em' }}>Oslo</span>
-            </div>
-          </div>
         </section>
 
         {/* ── OUTCOMES STRIP ── */}
@@ -460,8 +454,8 @@ export default function CaseStudyPetProtect() {
 
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24, marginBottom: 24 }}>
                 {[
-                  { label: 'Front', desc: 'Oslo logo with heart icon — brand recognition at a glance.', img: `${import.meta.env.BASE_URL}images/oslo-tag-front.svg` },
-                  { label: 'Back', desc: 'Unique TAG ID field — links the physical tag to the digital policy.', img: `${import.meta.env.BASE_URL}images/oslo-tag-back.svg` },
+                  { label: 'Front', desc: 'Oslo logo with heart icon — brand recognition at a glance.', img: `${import.meta.env.BASE_URL}images/oslo-tag-front.png` },
+                  { label: 'Back', desc: 'Unique TAG ID field — links the physical tag to the digital policy.', img: `${import.meta.env.BASE_URL}images/oslo-tag-back.png` },
                 ].map(({ label, desc, img }) => (
                   <div key={label} style={{ background: 'var(--s2)', border: '1px solid var(--bdr2)', borderRadius: 3, padding: 28, textAlign: 'center' }}>
                     <img src={img} alt={`Oslo pet tag — ${label}`} style={{ width: 180, height: 180, margin: '0 auto 20px', display: 'block', objectFit: 'contain' }} />

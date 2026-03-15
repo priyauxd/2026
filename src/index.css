@@ -53,22 +53,27 @@ body.hov #ring { width:52px;height:52px;border-color:var(--gold); }
 .bento {
   display:grid;
   grid-template-columns:repeat(12,1fr);
-  grid-template-rows:440px 320px 280px 300px 170px 280px;
+  grid-template-rows:440px 300px 170px 320px 280px 280px 320px;
   gap:var(--gap);
   margin-bottom:100px;
 }
-.b-raqam  { grid-column:1/9;   grid-row:1/2; }
-.b-about  { grid-column:9/13;  grid-row:1/2; }
-.b-bnpl   { grid-column:1/7;   grid-row:2/3; }
-.b-avail  { grid-column:7/10;  grid-row:2/3; }
-.b-stat   { grid-column:10/13; grid-row:2/3; }
-.b-crypto { grid-column:1/5;   grid-row:3/4; }
-.b-ai     { grid-column:5/9;   grid-row:3/4; }
-.b-wa     { grid-column:9/13;  grid-row:3/4; }
-.b-ent    { grid-column:1/8;   grid-row:4/5; }
-.b-creds  { grid-column:8/13;  grid-row:4/5; }
-.b-ds     { grid-column:1/13;  grid-row:5/6; }
-.b-pet    { grid-column:1/13;  grid-row:6/7; }
+/* Work cards */
+.b-raqam  { grid-column:1/7;   grid-row:1/2; }
+.b-aicall { grid-column:7/13;  grid-row:1/2; }
+/* Design system strips */
+.b-ds     { grid-column:1/13;  grid-row:2/3; }
+.b-pet    { grid-column:1/13;  grid-row:3/4; }
+/* Work cards continued */
+.b-bnpl   { grid-column:1/7;   grid-row:4/5; }
+.b-crypto { grid-column:7/13;  grid-row:4/5; }
+.b-ai     { grid-column:1/5;   grid-row:5/6; }
+.b-wa     { grid-column:5/9;   grid-row:5/6; }
+.b-ent    { grid-column:9/13;  grid-row:5/6; }
+/* Personal cards */
+.b-about  { grid-column:1/5;   grid-row:6/7; }
+.b-avail  { grid-column:5/9;   grid-row:6/7; }
+.b-creds  { grid-column:9/13;  grid-row:6/7; }
+.b-stat   { grid-column:1/4;   grid-row:7/8; }
 
 /* ─── CARD BASE ─── */
 .card {
@@ -105,6 +110,7 @@ body.hov #ring { width:52px;height:52px;border-color:var(--gold); }
 .bg-ai     { background:radial-gradient(ellipse 65% 55% at 25% 55%,#02140a 0%,transparent 55%),linear-gradient(135deg,#020805 0%,#030f07 60%,#020805 100%); }
 .bg-wa     { background:radial-gradient(ellipse 75% 55% at 75% 25%,#160f02 0%,transparent 55%),linear-gradient(135deg,#080500 0%,#140d02 55%,#060400 100%); }
 .bg-ent    { background:radial-gradient(ellipse 75% 45% at 55% 85%,#160202 0%,transparent 55%),linear-gradient(155deg,#060100 0%,#140202 60%,#060100 100%); }
+.bg-aicall { background:radial-gradient(ellipse 65% 55% at 75% 15%,#0c0828 0%,transparent 55%),linear-gradient(145deg,#060410 0%,#0e0826 55%,#060410 100%); }
 .bg-ds     { background:radial-gradient(ellipse 65% 55% at 25% 55%,#020c18 0%,transparent 55%),linear-gradient(135deg,#010609 0%,#030d16 60%,#010609 100%); }
 .bg-about  { background:var(--s3); }
 .bg-avail  { background:var(--s2); }
@@ -136,15 +142,24 @@ body.hov #ring { width:52px;height:52px;border-color:var(--gold); }
 @media(max-width:1200px){
   :root{--pad:36px}
   .bento{ grid-template-columns:repeat(6,1fr); grid-template-rows:auto; }
-  .b-raqam,.b-bnpl,.b-ent{grid-column:1/7;grid-row:auto;min-height:360px}
-  .b-about,.b-avail,.b-stat,.b-crypto,.b-ai,.b-wa,.b-creds{grid-column:span 3;grid-row:auto;min-height:280px}
+  /* Work cards */
+  .b-raqam,.b-aicall,.b-bnpl,.b-ent{grid-column:1/7;grid-row:auto;min-height:360px}
+  .b-crypto,.b-ai,.b-wa{grid-column:span 3;grid-row:auto;min-height:280px}
+  /* Design system strips */
   .b-ds{grid-column:1/7;grid-row:auto;min-height:160px}
   .b-pet{grid-column:1/7;grid-row:auto;min-height:240px}
+  /* Personal cards */
+  .b-about,.b-avail,.b-creds{grid-column:span 3;grid-row:auto;min-height:280px}
+  .b-stat{grid-column:span 3;grid-row:auto;min-height:280px}
 }
 @media(max-width:768px){
   :root{--pad:20px}
   .bento{grid-template-columns:1fr}
-  .b-raqam,.b-bnpl,.b-ent{min-height:300px}
-  .b-about,.b-avail,.b-stat,.b-crypto,.b-ai,.b-wa,.b-creds{grid-column:span 1;min-height:250px}
-  .b-ds,.b-pet{min-height:150px}
+  /* Work cards */
+  .b-raqam,.b-aicall,.b-bnpl,.b-ent{grid-column:1/-1;min-height:300px}
+  .b-crypto,.b-ai,.b-wa{grid-column:1/-1;min-height:250px}
+  /* Design system strips */
+  .b-ds,.b-pet{grid-column:1/-1;min-height:150px}
+  /* Personal cards */
+  .b-about,.b-avail,.b-stat,.b-creds{grid-column:1/-1;min-height:250px}
 }

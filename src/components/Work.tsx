@@ -6,6 +6,7 @@ type Filter = typeof FILTERS[number]
 
 const PROJECT_TAGS: Record<string,Filter[]> = {
   raqam:  ['Fintech','Mobile'],
+  aicall: ['AI','B2B'],
   bnpl:   ['Fintech','Mobile'],
   crypto: ['B2B'],
   ai:     ['AI','B2B'],
@@ -78,6 +79,8 @@ export default function Work() {
       </div>
 
       <div className="bento">
+        {/* ── WORK CARDS ── */}
+
         {/* 01 RAQAM */}
         <article className="card b-raqam bg-raqam rv d1" style={{cursor:'none',opacity:matches('raqam',filter)?1:.15,transition:'opacity .35s ease'}} onClick={()=>navigate('/case-study/raqam')}>
           <div className="cl" /><div className="cn">01</div>
@@ -93,6 +96,144 @@ export default function Work() {
             </div>
           </div>
         </article>
+
+        {/* AI CALL CENTER */}
+        <article className="card b-aicall bg-aicall rv d1" style={{cursor:'none',opacity:matches('aicall',filter)?1:.15,transition:'opacity .35s ease'}} onClick={()=>navigate('/case-study/ai-call-center')}>
+          <div className="cl" /><div className="cn">02</div>
+          <button onClick={e=>{e.stopPropagation();navigate('/case-study/ai-call-center')}} className="ca" aria-label="AI Call Center case study" style={{zIndex:2,border:'none',background:'transparent',cursor:'none'}}>↗</button>
+          <div className="ci" style={{zIndex:1,pointerEvents:'none'}}>
+            <span className="ctag">Enterprise SaaS · AI · B2B</span>
+            <h2 className="ctitle">AI-Powered Call Center<br />Intelligence</h2>
+            <p className="cdesc">Enterprise AI intelligence dashboard with real-time call transcription, NLP sentiment analysis, automated scoring, and conversation analytics across 100K+ daily interactions.</p>
+            <div className="cms">
+              <div className="cm"><b>50+</b>enterprise clients</div>
+              <div className="cm"><b>100K+</b>daily users</div>
+              <div className="cm"><b>60%</b>efficiency gain</div>
+            </div>
+          </div>
+        </article>
+
+        {/* 03 BNPL */}
+        <article className="card b-bnpl bg-bnpl rv d1" style={{opacity:matches('bnpl',filter)?1:.15,transition:'opacity .35s ease'}}>
+          <div className="cl" /><div className="cn">03</div>
+          <a href="#" className="ca">↗</a>
+          <div className="ci">
+            <span className="ctag">Fintech · Mobile</span>
+            <h2 className="ctitle">Buy Now Pay Later —<br />UAE Retail Banking</h2>
+            <p className="cdesc">Reduced application drop-off by 38% through clarity-first onboarding and transparent credit decisioning flows.</p>
+            <div className="cms">
+              <div className="cm"><b>38%</b>drop-off reduction</div>
+              <div className="cm"><b>4.8★</b>app store</div>
+              <div className="cm"><b>B2C</b>retail finance</div>
+            </div>
+          </div>
+        </article>
+
+        {/* 04 CRYPTO */}
+        <article className="card b-crypto bg-crypto rv d1" style={{opacity:matches('crypto',filter)?1:.15,transition:'opacity .35s ease'}}>
+          <div className="cl" /><div className="cn">04</div>
+          <a href="#" className="ca">↗</a>
+          <div className="ci">
+            <span className="ctag">Investment &amp; Wealth</span>
+            <h2 className="ctitle">Crypto Portfolio Tracker<br />for Private Wealth</h2>
+            <div className="cms">
+              <div className="cm"><b>UHNW</b>segment</div>
+              <div className="cm"><b>Web + iOS</b></div>
+            </div>
+          </div>
+        </article>
+
+        {/* 05 AI */}
+        <article className="card b-ai bg-ai rv d2" style={{opacity:matches('ai',filter)?1:.15,transition:'opacity .35s ease'}}>
+          <div className="cl" /><div className="cn">05</div>
+          <a href="#" className="ca">↗</a>
+          <div className="ci">
+            <span className="ctag">AI · B2B Banking</span>
+            <h2 className="ctitle">AI-Powered Compliance<br />Scorecard Platform</h2>
+            <div className="cms">
+              <div className="cm"><b>60%</b>faster analyst review</div>
+            </div>
+          </div>
+        </article>
+
+        {/* 06 WHATSAPP */}
+        <article className="card b-wa bg-wa rv d3" style={{opacity:matches('wa',filter)?1:.15,transition:'opacity .35s ease'}}>
+          <div className="cl" /><div className="cn">06</div>
+          <a href="#" className="ca">↗</a>
+          <div className="ci">
+            <span className="ctag">Conversational AI · Mobile</span>
+            <h2 className="ctitle">WhatsApp Business Banking<br />for the MENA Market</h2>
+            <div className="cms">
+              <div className="cm"><b>MENA</b>first design</div>
+              <div className="cm"><b>Conversational</b>UX</div>
+            </div>
+          </div>
+        </article>
+
+        {/* 07 ENTERPRISE */}
+        <article className="card b-ent bg-ent rv d1" style={{opacity:matches('ent',filter)?1:.15,transition:'opacity .35s ease'}}>
+          <div className="cl" /><div className="cn">07</div>
+          <a href="#" className="ca">↗</a>
+          <div className="ci">
+            <span className="ctag">B2B · Enterprise Banking</span>
+            <h2 className="ctitle">Voice Campaign Management for<br />Financial Contact Centers</h2>
+            <p className="cdesc">Unified platform for 50+ enterprise banks — call analytics, agent performance, compliance tracking, and campaign orchestration in one interface.</p>
+            <div className="cms">
+              <div className="cm"><b>50+</b>enterprise clients</div>
+              <div className="cm"><b>100K+</b>daily users</div>
+              <div className="cm"><b>B2B SaaS</b></div>
+            </div>
+          </div>
+        </article>
+
+        {/* ── DESIGN SYSTEM STRIPS ── */}
+
+        {/* 08 DESIGN SYSTEM strip */}
+        <article className="card b-ds bg-ds rv d1" style={{cursor:'none',opacity:matches('ds',filter)?1:.15,transition:'opacity .35s ease'}} onClick={()=>navigate('/case-study/design-system')}>
+          <div className="cl" /><div className="cn">08</div>
+          <button onClick={e=>{e.stopPropagation();navigate('/case-study/design-system')}} className="ca" aria-label="Design System case study" style={{zIndex:2,border:'none',background:'transparent',cursor:'none'}}>↗</button>
+          <div style={{ position:'absolute',inset:0,padding:'28px 36px',display:'flex',alignItems:'center',justifyContent:'space-between',gap:40 }}>
+            <div>
+              <span className="ctag">Design Systems · B2B Finance</span>
+              <h2 className="ctitle" style={{ marginBottom:0,fontSize:'clamp(1.1rem,1.4vw,1.6rem)' }}>
+                Core Design System — 150+ Components, Built from Scratch
+              </h2>
+            </div>
+            <div style={{ display:'flex',gap:32,flexShrink:0,alignItems:'center' }}>
+              {[['150+','components'],['50%','dev efficiency'],['Figma','+ tokens']].map(([b,l])=>(
+                <div key={l} style={{ fontSize:'.72rem',color:'var(--muted)' }}>
+                  <b style={{ fontSize:'1.3rem',fontFamily:'"Cormorant Garamond",Georgia,serif',fontWeight:300,color:'var(--gold)',display:'block',lineHeight:1,marginBottom:3 }}>{b}</b>
+                  {l}
+                </div>
+              ))}
+            </div>
+          </div>
+        </article>
+
+        {/* 09 PET PROTECT */}
+        <article className="card b-pet bg-pet rv d1" style={{cursor:'none',opacity:matches('pet',filter)?1:.15,transition:'opacity .35s ease'}} onClick={()=>navigate('/case-study/pet-protect')}>
+          <div className="cl" style={{background:'#5BB9C4'}} /><div className="cn">09</div>
+          <button onClick={e=>{e.stopPropagation();navigate('/case-study/pet-protect')}} className="ca" aria-label="Pet Protect case study" style={{zIndex:2,border:'none',background:'transparent',cursor:'none'}}>↗</button>
+          <div style={{ position:'absolute',inset:0,padding:'28px 36px',display:'flex',alignItems:'center',justifyContent:'space-between',gap:40 }}>
+            <div style={{zIndex:1,pointerEvents:'none'}}>
+              <span className="ctag" style={{color:'#5BB9C4'}}>Design System · Pet Insurance · Oslo</span>
+              <h2 className="ctitle" style={{ marginBottom:8,fontSize:'clamp(1.1rem,1.4vw,1.6rem)' }}>
+                Pet Protect — Design System for Oslo Pet Insurance
+              </h2>
+              <p className="cdesc">Token-first design system with 35+ components, dual-mode theming, 7-level shadow library, and a full type scale — from Figma Variables to shipped product.</p>
+            </div>
+            <div style={{ display:'flex',gap:32,flexShrink:0,alignItems:'center' }}>
+              {[['35+','components'],['2','theme modes'],['60+','tokens']].map(([b,l])=>(
+                <div key={l} style={{ fontSize:'.72rem',color:'var(--muted)' }}>
+                  <b style={{ fontSize:'1.3rem',fontFamily:'"Cormorant Garamond",Georgia,serif',fontWeight:300,color:'#5BB9C4',display:'block',lineHeight:1,marginBottom:3 }}>{b}</b>
+                  {l}
+                </div>
+              ))}
+            </div>
+          </div>
+        </article>
+
+        {/* ── PERSONAL CARDS ── */}
 
         {/* ABOUT CARD */}
         <article className="card b-about bg-about rv d2">
@@ -116,22 +257,6 @@ export default function Work() {
           </div>
         </article>
 
-        {/* 02 BNPL */}
-        <article className="card b-bnpl bg-bnpl rv d1" style={{opacity:matches('bnpl',filter)?1:.15,transition:'opacity .35s ease'}}>
-          <div className="cl" /><div className="cn">02</div>
-          <a href="#" className="ca">↗</a>
-          <div className="ci">
-            <span className="ctag">Fintech · Mobile</span>
-            <h2 className="ctitle">Buy Now Pay Later —<br />UAE Retail Banking</h2>
-            <p className="cdesc">Reduced application drop-off by 38% through clarity-first onboarding and transparent credit decisioning flows.</p>
-            <div className="cms">
-              <div className="cm"><b>38%</b>drop-off reduction</div>
-              <div className="cm"><b>4.8★</b>app store</div>
-              <div className="cm"><b>B2C</b>retail finance</div>
-            </div>
-          </div>
-        </article>
-
         {/* AVAILABILITY */}
         <article className="card b-avail bg-avail rv d2">
           <div style={{ position:'absolute',inset:0,padding:28,display:'flex',flexDirection:'column',justifyContent:'center',gap:13 }}>
@@ -146,72 +271,6 @@ export default function Work() {
             <a href="mailto:priyamvada.s.m@gmail.com" style={{ fontSize:'.66rem',fontWeight:500,letterSpacing:'.12em',textTransform:'uppercase',color:'var(--gold)',textDecoration:'none',borderBottom:'1px solid rgba(201,168,76,.3)',paddingBottom:2,width:'fit-content',cursor:'none' }}>
               Get in touch →
             </a>
-          </div>
-        </article>
-
-        {/* STAT */}
-        <article className="card b-stat bg-stat rv d3">
-          <div style={{ position:'absolute',inset:0,padding:28,display:'flex',flexDirection:'column',justifyContent:'flex-end' }}>
-            <div style={{ fontFamily:'"Cormorant Garamond",Georgia,serif',fontSize:'3.2rem',fontWeight:300,color:'var(--gold)',lineHeight:1,marginBottom:5 }}>150+</div>
-            <div style={{ fontSize:'.62rem',fontWeight:500,letterSpacing:'.16em',textTransform:'uppercase',color:'rgba(201,168,76,.55)' }}>Components built</div>
-            <div style={{ fontSize:'.7rem',color:'var(--muted)',marginTop:6 }}>Financial-grade design system<br />50% dev efficiency gain</div>
-          </div>
-        </article>
-
-        {/* 03 CRYPTO */}
-        <article className="card b-crypto bg-crypto rv d1" style={{opacity:matches('crypto',filter)?1:.15,transition:'opacity .35s ease'}}>
-          <div className="cl" /><div className="cn">03</div>
-          <a href="#" className="ca">↗</a>
-          <div className="ci">
-            <span className="ctag">Investment &amp; Wealth</span>
-            <h2 className="ctitle">Crypto Portfolio Tracker<br />for Private Wealth</h2>
-            <div className="cms">
-              <div className="cm"><b>UHNW</b>segment</div>
-              <div className="cm"><b>Web + iOS</b></div>
-            </div>
-          </div>
-        </article>
-
-        {/* 04 AI */}
-        <article className="card b-ai bg-ai rv d2" style={{opacity:matches('ai',filter)?1:.15,transition:'opacity .35s ease'}}>
-          <div className="cl" /><div className="cn">04</div>
-          <a href="#" className="ca">↗</a>
-          <div className="ci">
-            <span className="ctag">AI · B2B Banking</span>
-            <h2 className="ctitle">AI-Powered Compliance<br />Scorecard Platform</h2>
-            <div className="cms">
-              <div className="cm"><b>60%</b>faster analyst review</div>
-            </div>
-          </div>
-        </article>
-
-        {/* 05 WHATSAPP */}
-        <article className="card b-wa bg-wa rv d3" style={{opacity:matches('wa',filter)?1:.15,transition:'opacity .35s ease'}}>
-          <div className="cl" /><div className="cn">05</div>
-          <a href="#" className="ca">↗</a>
-          <div className="ci">
-            <span className="ctag">Conversational AI · Mobile</span>
-            <h2 className="ctitle">WhatsApp Business Banking<br />for the MENA Market</h2>
-            <div className="cms">
-              <div className="cm"><b>MENA</b>first design</div>
-              <div className="cm"><b>Conversational</b>UX</div>
-            </div>
-          </div>
-        </article>
-
-        {/* 06 ENTERPRISE */}
-        <article className="card b-ent bg-ent rv d1" style={{opacity:matches('ent',filter)?1:.15,transition:'opacity .35s ease'}}>
-          <div className="cl" /><div className="cn">06</div>
-          <a href="#" className="ca">↗</a>
-          <div className="ci">
-            <span className="ctag">B2B · Enterprise Banking</span>
-            <h2 className="ctitle">Voice Campaign Management for<br />Financial Contact Centers</h2>
-            <p className="cdesc">Unified platform for 50+ enterprise banks — call analytics, agent performance, compliance tracking, and campaign orchestration in one interface.</p>
-            <div className="cms">
-              <div className="cm"><b>50+</b>enterprise clients</div>
-              <div className="cm"><b>100K+</b>daily users</div>
-              <div className="cm"><b>B2B SaaS</b></div>
-            </div>
           </div>
         </article>
 
@@ -235,48 +294,12 @@ export default function Work() {
           </div>
         </article>
 
-        {/* 07 DESIGN SYSTEM strip */}
-        <article className="card b-ds bg-ds rv d1" style={{opacity:matches('ds',filter)?1:.15,transition:'opacity .35s ease'}}>
-          <div className="cl" /><div className="cn">07</div>
-          <a href="#" className="ca">↗</a>
-          <div style={{ position:'absolute',inset:0,padding:'28px 36px',display:'flex',alignItems:'center',justifyContent:'space-between',gap:40 }}>
-            <div>
-              <span className="ctag">Design Systems · B2B Finance</span>
-              <h2 className="ctitle" style={{ marginBottom:0,fontSize:'clamp(1.1rem,1.4vw,1.6rem)' }}>
-                Financial-Grade Design System — 150+ Components, Built from Scratch
-              </h2>
-            </div>
-            <div style={{ display:'flex',gap:32,flexShrink:0,alignItems:'center' }}>
-              {[['150+','components'],['50%','dev efficiency'],['Figma','+ tokens']].map(([b,l])=>(
-                <div key={l} style={{ fontSize:'.72rem',color:'var(--muted)' }}>
-                  <b style={{ fontSize:'1.3rem',fontFamily:'"Cormorant Garamond",Georgia,serif',fontWeight:300,color:'var(--gold)',display:'block',lineHeight:1,marginBottom:3 }}>{b}</b>
-                  {l}
-                </div>
-              ))}
-            </div>
-          </div>
-        </article>
-
-        {/* 08 PET PROTECT */}
-        <article className="card b-pet bg-pet rv d1" style={{cursor:'none',opacity:matches('pet',filter)?1:.15,transition:'opacity .35s ease'}} onClick={()=>navigate('/case-study/pet-protect')}>
-          <div className="cl" style={{background:'#5BB9C4'}} /><div className="cn">08</div>
-          <button onClick={e=>{e.stopPropagation();navigate('/case-study/pet-protect')}} className="ca" aria-label="Pet Protect case study" style={{zIndex:2,border:'none',background:'transparent',cursor:'none'}}>↗</button>
-          <div style={{ position:'absolute',inset:0,padding:'28px 36px',display:'flex',alignItems:'center',justifyContent:'space-between',gap:40 }}>
-            <div style={{zIndex:1,pointerEvents:'none'}}>
-              <span className="ctag" style={{color:'#5BB9C4'}}>Design System · Pet Insurance · Oslo</span>
-              <h2 className="ctitle" style={{ marginBottom:8,fontSize:'clamp(1.1rem,1.4vw,1.6rem)' }}>
-                Pet Protect — Design System for Oslo Pet Insurance
-              </h2>
-              <p className="cdesc">Token-first design system with 35+ components, dual-mode theming, 7-level shadow library, and a full type scale — from Figma Variables to shipped product.</p>
-            </div>
-            <div style={{ display:'flex',gap:32,flexShrink:0,alignItems:'center' }}>
-              {[['35+','components'],['2','theme modes'],['60+','tokens']].map(([b,l])=>(
-                <div key={l} style={{ fontSize:'.72rem',color:'var(--muted)' }}>
-                  <b style={{ fontSize:'1.3rem',fontFamily:'"Cormorant Garamond",Georgia,serif',fontWeight:300,color:'#5BB9C4',display:'block',lineHeight:1,marginBottom:3 }}>{b}</b>
-                  {l}
-                </div>
-              ))}
-            </div>
+        {/* STAT */}
+        <article className="card b-stat bg-stat rv d3">
+          <div style={{ position:'absolute',inset:0,padding:28,display:'flex',flexDirection:'column',justifyContent:'flex-end' }}>
+            <div style={{ fontFamily:'"Cormorant Garamond",Georgia,serif',fontSize:'3.2rem',fontWeight:300,color:'var(--gold)',lineHeight:1,marginBottom:5 }}>150+</div>
+            <div style={{ fontSize:'.62rem',fontWeight:500,letterSpacing:'.16em',textTransform:'uppercase',color:'rgba(201,168,76,.55)' }}>Components built</div>
+            <div style={{ fontSize:'.7rem',color:'var(--muted)',marginTop:6 }}>Financial-grade design system<br />50% dev efficiency gain</div>
           </div>
         </article>
       </div>
