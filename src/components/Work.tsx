@@ -7,11 +7,8 @@ type Filter = typeof FILTERS[number]
 const PROJECT_TAGS: Record<string,Filter[]> = {
   raqam:  ['Fintech','Mobile'],
   aicall: ['AI','B2B'],
-  bnpl:   ['Fintech','Mobile'],
-  crypto: ['B2B'],
   ai:     ['AI','B2B'],
   wa:     ['AI','Mobile'],
-  ent:    ['B2B'],
   ds:     ['Design Systems','B2B'],
   pet:    ['Design Systems'],
 }
@@ -50,9 +47,12 @@ export default function Work() {
     >
       {/* header */}
       <div className="rv" style={{ display:'flex',justifyContent:'space-between',alignItems:'flex-end',marginBottom:44 }}>
-        <h2 style={{ fontFamily:'"Cormorant Garamond",Georgia,serif',fontSize:'clamp(1.9rem,3.8vw,3.2rem)',fontWeight:300,lineHeight:1 }}>
-          Selected <em style={{ fontStyle:'italic',color:'var(--gold)' }}>work</em>
-        </h2>
+        <div style={{ display:'flex',alignItems:'baseline',gap:18 }}>
+          <span style={{ fontFamily:'"Cormorant Garamond",Georgia,serif',fontSize:'clamp(1rem,1.6vw,1.4rem)',fontWeight:300,color:'var(--gold)',lineHeight:1 }}>01</span>
+          <h2 style={{ fontFamily:'"Cormorant Garamond",Georgia,serif',fontSize:'clamp(1.9rem,3.8vw,3.2rem)',fontWeight:300,lineHeight:1 }}>
+            Selected <em style={{ fontStyle:'italic',color:'var(--gold)' }}>work</em>
+          </h2>
+        </div>
         <p style={{ fontSize:'.78rem',color:'var(--muted)',maxWidth:240,lineHeight:1.65,textAlign:'right' }}>
           Each project is a real design challenge — research through shipped product.
         </p>
@@ -113,39 +113,9 @@ export default function Work() {
           </div>
         </article>
 
-        {/* 03 BNPL */}
-        <article className="card b-bnpl bg-bnpl rv d1" style={{opacity:matches('bnpl',filter)?1:.15,transition:'opacity .35s ease'}}>
-          <div className="cl" /><div className="cn">03</div>
-          <a href="#" className="ca">↗</a>
-          <div className="ci">
-            <span className="ctag">Fintech · Mobile</span>
-            <h2 className="ctitle">Buy Now Pay Later —<br />UAE Retail Banking</h2>
-            <p className="cdesc">Reduced application drop-off by 38% through clarity-first onboarding and transparent credit decisioning flows.</p>
-            <div className="cms">
-              <div className="cm"><b>38%</b>drop-off reduction</div>
-              <div className="cm"><b>4.8★</b>app store</div>
-              <div className="cm"><b>B2C</b>retail finance</div>
-            </div>
-          </div>
-        </article>
-
-        {/* 04 CRYPTO */}
-        <article className="card b-crypto bg-crypto rv d1" style={{opacity:matches('crypto',filter)?1:.15,transition:'opacity .35s ease'}}>
-          <div className="cl" /><div className="cn">04</div>
-          <a href="#" className="ca">↗</a>
-          <div className="ci">
-            <span className="ctag">Investment &amp; Wealth</span>
-            <h2 className="ctitle">Crypto Portfolio Tracker<br />for Private Wealth</h2>
-            <div className="cms">
-              <div className="cm"><b>UHNW</b>segment</div>
-              <div className="cm"><b>Web + iOS</b></div>
-            </div>
-          </div>
-        </article>
-
-        {/* 05 AI */}
+        {/* 03 AI */}
         <article className="card b-ai bg-ai rv d2" style={{opacity:matches('ai',filter)?1:.15,transition:'opacity .35s ease'}}>
-          <div className="cl" /><div className="cn">05</div>
+          <div className="cl" /><div className="cn">03</div>
           <a href="#" className="ca">↗</a>
           <div className="ci">
             <span className="ctag">AI · B2B Banking</span>
@@ -156,9 +126,9 @@ export default function Work() {
           </div>
         </article>
 
-        {/* 06 OMNICHANNEL */}
+        {/* 04 OMNICHANNEL */}
         <article className="card b-wa bg-wa rv d3" style={{cursor:'none',opacity:matches('wa',filter)?1:.15,transition:'opacity .35s ease'}} onClick={()=>navigate('/case-study/omnichannel')}>
-          <div className="cl" /><div className="cn">06</div>
+          <div className="cl" /><div className="cn">04</div>
           <button onClick={e=>{e.stopPropagation();navigate('/case-study/omnichannel')}} className="ca" aria-label="Omnichannel case study" style={{zIndex:2,border:'none',background:'transparent',cursor:'none'}}>↗</button>
           <div className="ci" style={{zIndex:1,pointerEvents:'none'}}>
             <span className="ctag">Conversational AI · Mobile · B2B</span>
@@ -170,27 +140,11 @@ export default function Work() {
           </div>
         </article>
 
-        {/* 07 ENTERPRISE */}
-        <article className="card b-ent bg-ent rv d1" style={{opacity:matches('ent',filter)?1:.15,transition:'opacity .35s ease'}}>
-          <div className="cl" /><div className="cn">07</div>
-          <a href="#" className="ca">↗</a>
-          <div className="ci">
-            <span className="ctag">B2B · Enterprise Banking</span>
-            <h2 className="ctitle">Voice Campaign Management for<br />Financial Contact Centers</h2>
-            <p className="cdesc">Unified platform for 50+ enterprise banks — call analytics, agent performance, compliance tracking, and campaign orchestration in one interface.</p>
-            <div className="cms">
-              <div className="cm"><b>50+</b>enterprise clients</div>
-              <div className="cm"><b>100K+</b>daily users</div>
-              <div className="cm"><b>B2B SaaS</b></div>
-            </div>
-          </div>
-        </article>
-
         {/* ── DESIGN SYSTEM STRIPS ── */}
 
-        {/* 08 DESIGN SYSTEM strip */}
+        {/* 05 DESIGN SYSTEM strip */}
         <article className="card b-ds bg-ds rv d1" style={{cursor:'none',opacity:matches('ds',filter)?1:.15,transition:'opacity .35s ease'}} onClick={()=>navigate('/case-study/design-system')}>
-          <div className="cl" /><div className="cn">08</div>
+          <div className="cl" /><div className="cn">05</div>
           <button onClick={e=>{e.stopPropagation();navigate('/case-study/design-system')}} className="ca" aria-label="Design System case study" style={{zIndex:2,border:'none',background:'transparent',cursor:'none'}}>↗</button>
           <div style={{ position:'absolute',inset:0,padding:'28px 36px',display:'flex',alignItems:'center',justifyContent:'space-between',gap:40 }}>
             <div>
@@ -210,9 +164,9 @@ export default function Work() {
           </div>
         </article>
 
-        {/* 09 PET PROTECT */}
+        {/* 06 PET PROTECT */}
         <article className="card b-pet bg-pet rv d1" style={{cursor:'none',opacity:matches('pet',filter)?1:.15,transition:'opacity .35s ease'}} onClick={()=>navigate('/case-study/pet-protect')}>
-          <div className="cl" style={{background:'#5BB9C4'}} /><div className="cn">09</div>
+          <div className="cl" style={{background:'#5BB9C4'}} /><div className="cn">06</div>
           <button onClick={e=>{e.stopPropagation();navigate('/case-study/pet-protect')}} className="ca" aria-label="Pet Protect case study" style={{zIndex:2,border:'none',background:'transparent',cursor:'none'}}>↗</button>
           <div style={{ position:'absolute',inset:0,padding:'28px 36px',display:'flex',alignItems:'center',justifyContent:'space-between',gap:40 }}>
             <div style={{zIndex:1,pointerEvents:'none'}}>

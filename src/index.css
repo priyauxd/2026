@@ -53,27 +53,25 @@ body.hov #ring { width:52px;height:52px;border-color:var(--gold); }
 .bento {
   display:grid;
   grid-template-columns:repeat(12,1fr);
-  grid-template-rows:440px 300px 170px 320px 280px 280px 320px;
+  grid-template-rows:440px 280px 170px 320px 280px 320px;
   gap:var(--gap);
   margin-bottom:100px;
 }
-/* Work cards */
+/* Row 1 — main case studies */
 .b-raqam  { grid-column:1/7;   grid-row:1/2; }
 .b-aicall { grid-column:7/13;  grid-row:1/2; }
-/* Design system strips */
-.b-ds     { grid-column:1/13;  grid-row:2/3; }
-.b-pet    { grid-column:1/13;  grid-row:3/4; }
-/* Work cards continued */
-.b-bnpl   { grid-column:1/7;   grid-row:4/5; }
-.b-crypto { grid-column:7/13;  grid-row:4/5; }
-.b-ai     { grid-column:1/5;   grid-row:5/6; }
-.b-wa     { grid-column:5/9;   grid-row:5/6; }
-.b-ent    { grid-column:9/13;  grid-row:5/6; }
-/* Personal cards */
-.b-about  { grid-column:1/5;   grid-row:6/7; }
-.b-avail  { grid-column:5/9;   grid-row:6/7; }
-.b-creds  { grid-column:9/13;  grid-row:6/7; }
-.b-stat   { grid-column:1/4;   grid-row:7/8; }
+/* Row 2 — smaller work cards */
+.b-ai     { grid-column:1/5;   grid-row:2/3; }
+.b-wa     { grid-column:5/9;   grid-row:2/3; }
+/* Row 3–4 — design system strips */
+.b-ds     { grid-column:1/13;  grid-row:3/4; }
+.b-pet    { grid-column:1/13;  grid-row:4/5; }
+/* Row 5 — personal cards */
+.b-about  { grid-column:1/5;   grid-row:5/6; }
+.b-avail  { grid-column:5/9;   grid-row:5/6; }
+.b-creds  { grid-column:9/13;  grid-row:5/6; }
+/* Row 6 — stat */
+.b-stat   { grid-column:1/4;   grid-row:6/7; }
 
 /* ─── CARD BASE ─── */
 .card {
@@ -90,9 +88,9 @@ body.hov #ring { width:52px;height:52px;border-color:var(--gold); }
 .cn {
   position:absolute;top:20px;right:28px;
   font-family:'Cormorant Garamond',Georgia,serif;font-size:4.5rem;font-weight:300;line-height:1;
-  color:rgba(201,168,76,.05);pointer-events:none;transition:color .3s;
+  color:rgba(201,168,76,.12);pointer-events:none;transition:color .3s;
 }
-.card:hover .cn { color:rgba(201,168,76,.09); }
+.card:hover .cn { color:rgba(201,168,76,.22); }
 .ca {
   position:absolute;top:22px;left:28px;width:32px;height:32px;border-radius:50%;
   background:rgba(201,168,76,.07);border:1px solid rgba(201,168,76,.16);
@@ -143,8 +141,8 @@ body.hov #ring { width:52px;height:52px;border-color:var(--gold); }
   :root{--pad:36px}
   .bento{ grid-template-columns:repeat(6,1fr); grid-template-rows:auto; }
   /* Work cards */
-  .b-raqam,.b-aicall,.b-bnpl,.b-ent{grid-column:1/7;grid-row:auto;min-height:360px}
-  .b-crypto,.b-ai,.b-wa{grid-column:span 3;grid-row:auto;min-height:280px}
+  .b-raqam,.b-aicall{grid-column:1/7;grid-row:auto;min-height:360px}
+  .b-ai,.b-wa{grid-column:span 3;grid-row:auto;min-height:280px}
   /* Design system strips */
   .b-ds{grid-column:1/7;grid-row:auto;min-height:160px}
   .b-pet{grid-column:1/7;grid-row:auto;min-height:240px}
@@ -156,8 +154,8 @@ body.hov #ring { width:52px;height:52px;border-color:var(--gold); }
   :root{--pad:20px}
   .bento{grid-template-columns:1fr}
   /* Work cards */
-  .b-raqam,.b-aicall,.b-bnpl,.b-ent{grid-column:1/-1;min-height:300px}
-  .b-crypto,.b-ai,.b-wa{grid-column:1/-1;min-height:250px}
+  .b-raqam,.b-aicall{grid-column:1/-1;min-height:300px}
+  .b-ai,.b-wa{grid-column:1/-1;min-height:250px}
   /* Design system strips */
   .b-ds,.b-pet{grid-column:1/-1;min-height:150px}
   /* Personal cards */

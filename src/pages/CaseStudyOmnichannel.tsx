@@ -40,6 +40,90 @@ const PAIN_POINTS = [
   { n: '4', t: 'No Service Quality Metrics', d: 'There was no way to measure response times, first-contact resolution, or service quality on WhatsApp — a blind spot in every enterprise SLA report.' },
 ]
 
+/* ─── IA DATA ─────────────────────────────────────────────── */
+
+const IA_AUTH_FLOW = ['Splash Screen', 'Onboarding', 'SSO Login', 'Set Permissions', 'Home Screen']
+
+const IA_SECTIONS = [
+  {
+    label: 'Home',
+    color: '#C9A84C',
+    children: ['News', 'Recent Calls', 'My Activity', 'Currency', 'Call History'],
+  },
+  {
+    label: 'Conversations',
+    color: '#7C6FCD',
+    children: [
+      'Single Convo per Channel',
+      'Latest Conversations',
+      'My Conversations',
+      'Filters: New · Open · Resolved · Broadcast',
+      'Voice Call Card',
+      'WhatsApp Card',
+      'SMS Card',
+      'Notes Card',
+      'Email Card',
+    ],
+  },
+  {
+    label: 'Contacts',
+    color: '#5BB9C4',
+    children: [
+      'Search & Filter',
+      'Add New Contact',
+      'Contact Profile',
+      'Communication Timeline',
+      'History',
+      'Notes',
+      'Files & Media',
+    ],
+  },
+  {
+    label: 'Statistics',
+    color: '#E47C6E',
+    children: [
+      'Inbound Calls',
+      'Outbound Calls',
+      'Missed Calls',
+      'Agent Stats',
+      'Call Type Breakdown',
+    ],
+  },
+  {
+    label: 'Settings',
+    color: '#90A1B9',
+    children: ['Account', 'Appearance', 'Notifications', 'Language', 'Help & Resources', 'Logout'],
+  },
+]
+
+const IA_CONV_CHANNELS = [
+  {
+    name: 'Voice Call',
+    color: '#7C6FCD',
+    items: ['Name & Profile Image', 'Call Direction', 'Recording Player', 'Call Notes', 'Call Tags', 'CDR'],
+  },
+  {
+    name: 'WhatsApp',
+    color: '#25D366',
+    items: ['Contact Profile', 'Message Content', 'Delivery Status', 'Images / Video / Doc', 'Location', 'Voice Note'],
+  },
+  {
+    name: 'SMS',
+    color: '#C9A84C',
+    items: ['Contact Profile', 'SMS Content', 'Delivery Report', 'Char Count / Segments', 'Timestamp'],
+  },
+  {
+    name: 'Notes',
+    color: '#E47C6E',
+    items: ['Note Content', 'Note Icon', 'Timestamp', 'Attachments', 'Review Flag'],
+  },
+  {
+    name: 'Email',
+    color: '#5BB9C4',
+    items: ['From / To / Subject', 'Email Body', 'Attachments', 'Reply / Reply All', 'Send Status', 'Thread View'],
+  },
+]
+
 const RESEARCH_INSIGHTS = [
   'Customers expected 5-minute response times on WhatsApp vs 24 hours for email — SLA requirements demanded a fundamental rethink of agent tooling',
   'Rich media (images, documents, receipts) was essential for customer support — agents needed to view and share files without leaving the conversation',
@@ -270,6 +354,80 @@ export default function CaseStudyOmnichannel() {
                     She frequently starts conversations via <strong style={{ color: 'var(--white)' }}>WhatsApp</strong>, escalates to a <strong style={{ color: 'var(--white)' }}>voice call</strong> for complex issues, then follows up with confirmation details via <strong style={{ color: 'var(--white)' }}>SMS</strong>.
                   </p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── INFORMATION ARCHITECTURE ── */}
+        <section style={{ maxWidth: 1100, margin: '0 auto', padding: '80px var(--pad) 0' }}>
+          <h2 style={{ fontFamily: '"Cormorant Garamond",Georgia,serif', fontSize: 'clamp(1.5rem,2.8vw,2.4rem)', fontWeight: 300, lineHeight: 1.1, marginBottom: 12, color: 'var(--white)' }}>
+            Information Architecture
+          </h2>
+          <p style={{ fontSize: '.9rem', lineHeight: 1.85, color: 'var(--muted)', marginBottom: 48, maxWidth: 780 }}>
+            Mapping the complete product structure — from authentication through every section and channel type — to ensure every agent workflow had a clear, logical home before a single screen was designed.
+          </p>
+
+          {/* Auth Flow */}
+          <div style={{ marginBottom: 48 }}>
+            <div style={{ fontSize: '.6rem', fontWeight: 500, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 20 }}>Authentication Flow</div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 0, flexWrap: 'wrap' }}>
+              {IA_AUTH_FLOW.map((node, i) => (
+                <div key={node} style={{ display: 'flex', alignItems: 'center' }}>
+                  <div style={{
+                    padding: '10px 18px',
+                    background: i === IA_AUTH_FLOW.length - 1 ? 'rgba(201,168,76,.15)' : 'var(--s2)',
+                    border: `1px solid ${i === IA_AUTH_FLOW.length - 1 ? 'var(--gold)' : 'var(--bdr2)'}`,
+                    borderRadius: 8,
+                    fontSize: '.75rem',
+                    fontWeight: i === IA_AUTH_FLOW.length - 1 ? 500 : 400,
+                    color: i === IA_AUTH_FLOW.length - 1 ? 'var(--gold)' : 'var(--white)',
+                    whiteSpace: 'nowrap',
+                  }}>{node}</div>
+                  {i < IA_AUTH_FLOW.length - 1 && (
+                    <div style={{ padding: '0 10px', color: 'var(--muted)', fontSize: '.85rem' }}>→</div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Main IA sections */}
+          <div style={{ marginBottom: 48 }}>
+            <div style={{ fontSize: '.6rem', fontWeight: 500, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 20 }}>Main Navigation Sections</div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(180px,1fr))', gap: 12 }}>
+              {IA_SECTIONS.map(({ label, color, children }) => (
+                <div key={label} style={{ background: 'var(--s1)', border: `1px solid var(--bdr2)`, borderTop: `3px solid ${color}`, borderRadius: 10, padding: '18px 16px' }}>
+                  <div style={{ fontSize: '.78rem', fontWeight: 500, color: 'var(--white)', marginBottom: 12 }}>{label}</div>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+                    {children.map(c => (
+                      <div key={c} style={{ display: 'flex', alignItems: 'flex-start', gap: 8 }}>
+                        <span style={{ color, fontSize: '.65rem', flexShrink: 0, marginTop: 3 }}>▸</span>
+                        <span style={{ fontSize: '.72rem', color: 'var(--muted)', lineHeight: 1.45 }}>{c}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Conversation channel detail */}
+          <div>
+            <div style={{ fontSize: '.6rem', fontWeight: 500, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 20 }}>Conversation Channel Cards</div>
+            <div style={{ background: 'var(--s1)', border: '1px solid var(--bdr2)', borderRadius: 12, padding: '28px 28px' }}>
+              <p style={{ fontSize: '.8rem', color: 'var(--muted)', marginBottom: 24, margin: '0 0 24px' }}>
+                Each channel within a conversation surfaces contextually relevant data. A voice call shows recording controls; a WhatsApp thread shows rich media; an email shows threading. Same workspace, channel-appropriate detail.
+              </p>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(160px,1fr))', gap: 12 }}>
+                {IA_CONV_CHANNELS.map(({ name, color, items }) => (
+                  <div key={name} style={{ background: 'var(--s2)', border: `1px solid var(--bdr2)`, borderLeft: `3px solid ${color}`, borderRadius: 8, padding: '14px 14px' }}>
+                    <div style={{ fontSize: '.72rem', fontWeight: 500, color, marginBottom: 10 }}>{name}</div>
+                    {items.map(item => (
+                      <div key={item} style={{ fontSize: '.68rem', color: 'var(--muted)', lineHeight: 1.8 }}>· {item}</div>
+                    ))}
+                  </div>
+                ))}
               </div>
             </div>
           </div>

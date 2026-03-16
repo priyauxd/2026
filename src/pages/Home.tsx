@@ -6,6 +6,7 @@ import Ticker from '../components/Ticker'
 import Work from '../components/Work'
 import Process from '../components/Process'
 import About from '../components/About'
+import Recommendations from '../components/Recommendations'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 
@@ -30,6 +31,7 @@ export default function Home() {
         <Work />
         <Process />
         <About />
+        <Recommendations />
         <Contact />
       </main>
       <Footer />
