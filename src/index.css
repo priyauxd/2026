@@ -53,7 +53,7 @@ body.hov #ring { width:52px;height:52px;border-color:var(--gold); }
 .bento {
   display:grid;
   grid-template-columns:repeat(12,1fr);
-  grid-template-rows:440px 280px 320px 280px 320px;
+  grid-template-rows:440px 280px 320px 320px 280px 320px;
   gap:var(--gap);
   margin-bottom:100px;
 }
@@ -66,12 +66,14 @@ body.hov #ring { width:52px;height:52px;border-color:var(--gold); }
 .b-ds     { grid-column:9/13;  grid-row:2/3; }
 /* Row 3 — pet protect strip */
 .b-pet    { grid-column:1/13;  grid-row:3/4; }
-/* Row 4 — personal cards (extra top margin) */
-.b-about  { grid-column:1/5;   grid-row:4/5; margin-top:60px; }
-.b-avail  { grid-column:5/9;   grid-row:4/5; margin-top:60px; }
-.b-creds  { grid-column:9/13;  grid-row:4/5; margin-top:60px; }
-/* Row 5 — stat */
-.b-stat   { grid-column:1/4;   grid-row:5/6; }
+/* Row 4 — oslo pet website */
+.b-oslo   { grid-column:1/13;  grid-row:4/5; }
+/* Row 5 — personal cards (extra top margin) */
+.b-about  { grid-column:1/5;   grid-row:5/6; margin-top:60px; }
+.b-avail  { grid-column:5/9;   grid-row:5/6; margin-top:60px; }
+.b-creds  { grid-column:9/13;  grid-row:5/6; margin-top:60px; }
+/* Row 6 — stat */
+.b-stat   { grid-column:1/4;   grid-row:6/7; }
 
 /* ─── CARD BASE ─── */
 .card {
@@ -115,6 +117,7 @@ body.hov #ring { width:52px;height:52px;border-color:var(--gold); }
 .bg-stat   { background:linear-gradient(145deg,#140e02,#0a0800); }
 .bg-creds  { background:var(--s2); }
 .bg-pet    { background:radial-gradient(ellipse 65% 55% at 50% 25%,#0a2a30 0%,transparent 55%),linear-gradient(145deg,#040c0e 0%,#081a1e 55%,#040c0e 100%); }
+.bg-oslo   { background:radial-gradient(ellipse 55% 65% at 80% 30%,#0a2a30 0%,transparent 55%),linear-gradient(135deg,#030c0e 0%,#061518 55%,#030c0e 100%); }
 
 /* card typography */
 .ctag   { font-size:.6rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:11px;display:block; }
@@ -145,7 +148,7 @@ body.hov #ring { width:52px;height:52px;border-color:var(--gold); }
   .b-ai,.b-wa{grid-column:span 3;grid-row:auto;min-height:280px}
   /* Design system strips */
   .b-ds{grid-column:span 3;grid-row:auto;min-height:280px}
-  .b-pet{grid-column:1/7;grid-row:auto;min-height:240px}
+  .b-pet,.b-oslo{grid-column:1/7;grid-row:auto;min-height:240px}
   /* Personal cards */
   .b-about,.b-avail,.b-creds{grid-column:span 3;grid-row:auto;min-height:280px}
   .b-stat{grid-column:span 3;grid-row:auto;min-height:280px}
@@ -158,7 +161,7 @@ body.hov #ring { width:52px;height:52px;border-color:var(--gold); }
   .b-ai,.b-wa{grid-column:1/-1;min-height:250px}
   /* Design system strips */
   .b-ds{grid-column:1/-1;min-height:250px}
-  .b-pet{grid-column:1/-1;min-height:150px}
+  .b-pet,.b-oslo{grid-column:1/-1;min-height:150px}
   /* Personal cards */
   .b-about,.b-avail,.b-stat,.b-creds{grid-column:1/-1;min-height:250px}
 }

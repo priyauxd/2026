@@ -11,6 +11,7 @@ const PROJECT_TAGS: Record<string,Filter[]> = {
   wa:     ['AI','Mobile'],
   ds:     ['Design Systems','B2B'],
   pet:    ['Design Systems'],
+  oslo:   ['Design Systems','Mobile'],
 }
 
 function useReveal() {
@@ -156,7 +157,7 @@ export default function Work() {
           </div>
         </article>
 
-        {/* 06 PET PROTECT */}
+        {/* 06 PET PROTECT — Design System */}
         <article className="card b-pet bg-pet rv d1" style={{cursor:'none',opacity:matches('pet',filter)?1:.15,transition:'opacity .35s ease'}} onClick={()=>navigate('/case-study/pet-protect')}>
           <div className="cl" style={{background:'#5BB9C4'}} /><div className="cn">06</div>
           <button onClick={e=>{e.stopPropagation();navigate('/case-study/pet-protect')}} className="ca" aria-label="Pet Protect case study" style={{zIndex:2,border:'none',background:'transparent',cursor:'none'}}>↗</button>
@@ -175,6 +176,22 @@ export default function Work() {
                   {l}
                 </div>
               ))}
+            </div>
+          </div>
+        </article>
+
+        {/* 07 OSLO PET — Website */}
+        <article className="card b-oslo bg-oslo rv d2" style={{cursor:'none',opacity:matches('oslo',filter)?1:.15,transition:'opacity .35s ease'}} onClick={()=>navigate('/case-study/oslo-pet')}>
+          <div className="cl" style={{background:'#5BB9C4'}} /><div className="cn">07</div>
+          <button onClick={e=>{e.stopPropagation();navigate('/case-study/oslo-pet')}} className="ca" aria-label="Oslo Pet Insurance case study" style={{zIndex:2,border:'none',background:'transparent',cursor:'none'}}>↗</button>
+          <div className="ci" style={{zIndex:1,pointerEvents:'none'}}>
+            <span className="ctag" style={{color:'#5BB9C4'}}>Web App · Pet Insurance · Oslo</span>
+            <h2 className="ctitle">Oslo Pet Insurance —<br />Pet Cloud Portal</h2>
+            <p className="cdesc">Customer-facing web portal for policy management, multi-pet tracking, real-time claims, and vet access — shipped to oslopetinsurance.pet.</p>
+            <div className="cms">
+              <div className="cm"><b>6</b>core flows</div>
+              <div className="cm"><b>35+</b>components</div>
+              <div className="cm"><b>2</b>platforms</div>
             </div>
           </div>
         </article>
