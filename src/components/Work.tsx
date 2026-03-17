@@ -89,7 +89,7 @@ export default function Work() {
         >
           <div className="cl" /><div className="cn">01</div>
           <div className="cimg bg-raqam">
-            <img src="/images/rq.png" alt="Raqam Bank mobile banking app" />
+            <img src={`${import.meta.env.BASE_URL}images/rq.png`} alt="Raqam Bank mobile banking app" />
           </div>
           <div className="cib">
             <div>
@@ -121,7 +121,7 @@ export default function Work() {
         >
           <div className="cl" /><div className="cn">02</div>
           <div className="cimg bg-aicall">
-            <img src="/images/aicall-thumb.png" alt="AI Call Center intelligence dashboard" />
+            <img src={`${import.meta.env.BASE_URL}images/aicall-thumb.png`} alt="AI Call Center intelligence dashboard" />
           </div>
           <div className="cib">
             <div>
