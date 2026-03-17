@@ -80,125 +80,211 @@ export default function Work() {
       </div>
 
       <div className="bento">
-        {/* ── WORK CARDS ── */}
 
         {/* 01 RAQAM */}
-        <article className="card b-raqam bg-raqam rv d1" style={{cursor:'none',opacity:matches('raqam',filter)?1:.15,transition:'opacity .35s ease'}} onClick={()=>navigate('/case-study/raqam')}>
+        <article
+          className="card b-raqam rv d1"
+          style={{cursor:'none',opacity:matches('raqam',filter)?1:.15,transition:'opacity .35s ease'}}
+          onClick={()=>navigate('/case-study/raqam')}
+        >
           <div className="cl" /><div className="cn">01</div>
-          <button onClick={e=>{e.stopPropagation();navigate('/case-study/raqam')}} className="ca" aria-label="Raqam case study" style={{zIndex:2,border:'none',background:'transparent',cursor:'none'}}>↗</button>
-          <div className="ci" style={{zIndex:1,pointerEvents:'none'}}>
-            <span className="ctag">Mobile Banking · Fintech · UAE</span>
-            <h2 className="ctitle">Raqam Bank — Digital Banking,<br />the Human Touch</h2>
-            <p className="cdesc">Reimagining mobile banking for UAE's 88% expat population — transparent international transfers, AI-powered spending insights, enterprise operations dashboard.</p>
-            <div className="cms">
-              <div className="cm"><b>+20%</b>transfer completion</div>
-              <div className="cm"><b>−30%</b>time to transfer</div>
-              <div className="cm"><b>40%+</b>insights engagement</div>
+          <div className="cimg bg-raqam">
+            <img src="/images/rq.png" alt="Raqam Bank mobile banking app" />
+          </div>
+          <div className="cib">
+            <div>
+              <span className="ctag">Mobile Banking · Fintech · UAE</span>
+              <h2 className="ctitle">Raqam Bank — Digital Banking,<br />the Human Touch</h2>
+              <p className="cdesc">Reimagining mobile banking for UAE's 88% expat population — transparent international transfers, AI-powered spending insights, enterprise operations dashboard.</p>
+            </div>
+            <div style={{ display:'flex',justifyContent:'space-between',alignItems:'flex-end' }}>
+              <div className="cms">
+                <div className="cm"><b>+20%</b>transfer completion</div>
+                <div className="cm"><b>−30%</b>time to transfer</div>
+                <div className="cm"><b>40%+</b>insights engagement</div>
+              </div>
+              <button
+                onClick={e=>{e.stopPropagation();navigate('/case-study/raqam')}}
+                className="ca"
+                aria-label="Raqam case study"
+                style={{position:'static',border:'1px solid rgba(201,168,76,.16)',background:'rgba(201,168,76,.07)',cursor:'none',flexShrink:0}}
+              >↗</button>
             </div>
           </div>
         </article>
 
-        {/* AI CALL CENTER */}
-        <article className="card b-aicall bg-aicall rv d1" style={{cursor:'none',opacity:matches('aicall',filter)?1:.15,transition:'opacity .35s ease'}} onClick={()=>navigate('/case-study/ai-call-center')}>
+        {/* 02 AI CALL CENTER */}
+        <article
+          className="card b-aicall rv d1"
+          style={{cursor:'none',opacity:matches('aicall',filter)?1:.15,transition:'opacity .35s ease'}}
+          onClick={()=>navigate('/case-study/ai-call-center')}
+        >
           <div className="cl" /><div className="cn">02</div>
-          <button onClick={e=>{e.stopPropagation();navigate('/case-study/ai-call-center')}} className="ca" aria-label="AI Call Center case study" style={{zIndex:2,border:'none',background:'transparent',cursor:'none'}}>↗</button>
-          <div className="ci" style={{zIndex:1,pointerEvents:'none'}}>
-            <span className="ctag">Enterprise SaaS · AI · B2B</span>
-            <h2 className="ctitle">AI-Powered Call Center<br />Intelligence</h2>
-            <p className="cdesc">Enterprise AI intelligence dashboard with real-time call transcription, NLP sentiment analysis, automated scoring, and conversation analytics across 100K+ daily interactions.</p>
-            <div className="cms">
-              <div className="cm"><b>50+</b>enterprise clients</div>
-              <div className="cm"><b>100K+</b>daily users</div>
-              <div className="cm"><b>60%</b>efficiency gain</div>
+          <div className="cimg bg-aicall">
+            <img src="/images/aicall-thumb.png" alt="AI Call Center intelligence dashboard" />
+          </div>
+          <div className="cib">
+            <div>
+              <span className="ctag">Enterprise SaaS · AI · B2B</span>
+              <h2 className="ctitle">AI-Powered Call Center<br />Intelligence</h2>
+              <p className="cdesc">Enterprise AI intelligence dashboard with real-time call transcription, NLP sentiment analysis, automated scoring, and conversation analytics across 100K+ daily interactions.</p>
+            </div>
+            <div style={{ display:'flex',justifyContent:'space-between',alignItems:'flex-end' }}>
+              <div className="cms">
+                <div className="cm"><b>50+</b>enterprise clients</div>
+                <div className="cm"><b>100K+</b>daily users</div>
+                <div className="cm"><b>60%</b>efficiency gain</div>
+              </div>
+              <button
+                onClick={e=>{e.stopPropagation();navigate('/case-study/ai-call-center')}}
+                className="ca"
+                aria-label="AI Call Center case study"
+                style={{position:'static',border:'1px solid rgba(201,168,76,.16)',background:'rgba(201,168,76,.07)',cursor:'none',flexShrink:0}}
+              >↗</button>
             </div>
           </div>
         </article>
 
-        {/* 03 AI */}
-        <article className="card b-ai bg-ai rv d2" style={{opacity:matches('ai',filter)?1:.15,transition:'opacity .35s ease'}}>
+        {/* 03 AI COMPLIANCE */}
+        <article
+          className="card b-ai rv d2"
+          style={{opacity:matches('ai',filter)?1:.15,transition:'opacity .35s ease'}}
+        >
           <div className="cl" /><div className="cn">03</div>
-          <a href="#" className="ca">↗</a>
-          <div className="ci">
-            <span className="ctag">AI · B2B Banking</span>
-            <h2 className="ctitle">AI-Powered Compliance<br />Scorecard Platform</h2>
-            <div className="cms">
-              <div className="cm"><b>60%</b>faster analyst review</div>
+          <div className="cimg bg-ai" />
+          <div className="cib">
+            <div>
+              <span className="ctag">AI · B2B Banking</span>
+              <h2 className="ctitle">AI-Powered Compliance<br />Scorecard Platform</h2>
+            </div>
+            <div style={{ display:'flex',justifyContent:'space-between',alignItems:'flex-end' }}>
+              <div className="cms">
+                <div className="cm"><b>60%</b>faster analyst review</div>
+              </div>
+              <a href="#" className="ca" style={{position:'static',flexShrink:0}}>↗</a>
             </div>
           </div>
         </article>
 
         {/* 04 OMNICHANNEL */}
-        <article className="card b-wa bg-wa rv d3" style={{cursor:'none',opacity:matches('wa',filter)?1:.15,transition:'opacity .35s ease'}} onClick={()=>navigate('/case-study/omnichannel')}>
+        <article
+          className="card b-wa rv d3"
+          style={{cursor:'none',opacity:matches('wa',filter)?1:.15,transition:'opacity .35s ease'}}
+          onClick={()=>navigate('/case-study/omnichannel')}
+        >
           <div className="cl" /><div className="cn">04</div>
-          <button onClick={e=>{e.stopPropagation();navigate('/case-study/omnichannel')}} className="ca" aria-label="Omnichannel case study" style={{zIndex:2,border:'none',background:'transparent',cursor:'none'}}>↗</button>
-          <div className="ci" style={{zIndex:1,pointerEvents:'none'}}>
-            <span className="ctag">Conversational AI · Mobile · B2B</span>
-            <h2 className="ctitle">Omnichannel Platform —<br />WhatsApp &amp; Voice, Unified</h2>
-            <div className="cms">
-              <div className="cm"><b>60%</b>faster responses</div>
-              <div className="cm"><b>70%</b>template savings</div>
+          <div className="cimg bg-wa" />
+          <div className="cib">
+            <div>
+              <span className="ctag">Conversational AI · Mobile · B2B</span>
+              <h2 className="ctitle">Omnichannel Platform —<br />WhatsApp &amp; Voice, Unified</h2>
+            </div>
+            <div style={{ display:'flex',justifyContent:'space-between',alignItems:'flex-end' }}>
+              <div className="cms">
+                <div className="cm"><b>60%</b>faster responses</div>
+                <div className="cm"><b>70%</b>template savings</div>
+              </div>
+              <button
+                onClick={e=>{e.stopPropagation();navigate('/case-study/omnichannel')}}
+                className="ca"
+                aria-label="Omnichannel case study"
+                style={{position:'static',border:'1px solid rgba(201,168,76,.16)',background:'rgba(201,168,76,.07)',cursor:'none',flexShrink:0}}
+              >↗</button>
             </div>
           </div>
         </article>
-
-        {/* ── DESIGN SYSTEM STRIPS ── */}
 
         {/* 05 DESIGN SYSTEM */}
-        <article className="card b-ds bg-ds rv d1" style={{cursor:'none',opacity:matches('ds',filter)?1:.15,transition:'opacity .35s ease'}} onClick={()=>navigate('/case-study/design-system')}>
+        <article
+          className="card b-ds rv d1"
+          style={{cursor:'none',opacity:matches('ds',filter)?1:.15,transition:'opacity .35s ease'}}
+          onClick={()=>navigate('/case-study/design-system')}
+        >
           <div className="cl" /><div className="cn">05</div>
-          <button onClick={e=>{e.stopPropagation();navigate('/case-study/design-system')}} className="ca" aria-label="Design System case study" style={{zIndex:2,border:'none',background:'transparent',cursor:'none'}}>↗</button>
-          <div className="ci" style={{zIndex:1,pointerEvents:'none'}}>
-            <span className="ctag">Design Systems · B2B Finance</span>
-            <h2 className="ctitle">Core Design System — 150+ Components</h2>
-            <div className="cms">
-              <div className="cm"><b>150+</b>components</div>
-              <div className="cm"><b>50%</b>dev efficiency</div>
+          <div className="cimg bg-ds" />
+          <div className="cib">
+            <div>
+              <span className="ctag">Design Systems · B2B Finance</span>
+              <h2 className="ctitle">Core Design System —<br />150+ Components</h2>
+            </div>
+            <div style={{ display:'flex',justifyContent:'space-between',alignItems:'flex-end' }}>
+              <div className="cms">
+                <div className="cm"><b>150+</b>components</div>
+                <div className="cm"><b>50%</b>dev efficiency</div>
+              </div>
+              <button
+                onClick={e=>{e.stopPropagation();navigate('/case-study/design-system')}}
+                className="ca"
+                aria-label="Design System case study"
+                style={{position:'static',border:'1px solid rgba(201,168,76,.16)',background:'rgba(201,168,76,.07)',cursor:'none',flexShrink:0}}
+              >↗</button>
             </div>
           </div>
         </article>
 
-        {/* 06 PET PROTECT — Design System */}
-        <article className="card b-pet bg-pet rv d1" style={{cursor:'none',opacity:matches('pet',filter)?1:.15,transition:'opacity .35s ease'}} onClick={()=>navigate('/case-study/pet-protect')}>
+        {/* 06 PET PROTECT */}
+        <article
+          className="card b-pet rv d1"
+          style={{cursor:'none',opacity:matches('pet',filter)?1:.15,transition:'opacity .35s ease'}}
+          onClick={()=>navigate('/case-study/pet-protect')}
+        >
           <div className="cl" style={{background:'#5BB9C4'}} /><div className="cn">06</div>
-          <button onClick={e=>{e.stopPropagation();navigate('/case-study/pet-protect')}} className="ca" aria-label="Pet Protect case study" style={{zIndex:2,border:'none',background:'transparent',cursor:'none'}}>↗</button>
-          <div style={{ position:'absolute',inset:0,padding:'28px 36px',display:'flex',alignItems:'center',justifyContent:'space-between',gap:40 }}>
-            <div style={{zIndex:1,pointerEvents:'none'}}>
+          <div className="cimg bg-pet" />
+          <div className="cib">
+            <div>
               <span className="ctag" style={{color:'#5BB9C4'}}>Design System · Pet Insurance · Oslo</span>
-              <h2 className="ctitle" style={{ marginBottom:8,fontSize:'clamp(1.1rem,1.4vw,1.6rem)' }}>
-                Pet Protect — Design System for Oslo Pet Insurance
-              </h2>
+              <h2 className="ctitle" style={{fontSize:'clamp(1.05rem,1.3vw,1.5rem)'}}>Pet Protect — Design System for Oslo Pet Insurance</h2>
               <p className="cdesc">Token-first design system with 35+ components, dual-mode theming, 7-level shadow library, and a full type scale — from Figma Variables to shipped product.</p>
             </div>
-            <div style={{ display:'flex',gap:32,flexShrink:0,alignItems:'center' }}>
-              {[['35+','components'],['2','theme modes'],['60+','tokens']].map(([b,l])=>(
-                <div key={l} style={{ fontSize:'.72rem',color:'var(--muted)' }}>
-                  <b style={{ fontSize:'1.3rem',fontFamily:'"Cormorant Garamond",Georgia,serif',fontWeight:300,color:'#5BB9C4',display:'block',lineHeight:1,marginBottom:3 }}>{b}</b>
-                  {l}
-                </div>
-              ))}
+            <div style={{ display:'flex',justifyContent:'space-between',alignItems:'flex-end' }}>
+              <div className="cms">
+                {[['35+','components'],['2','theme modes'],['60+','tokens']].map(([b,l])=>(
+                  <div key={l} className="cm"><b style={{color:'#5BB9C4'}}>{b}</b>{l}</div>
+                ))}
+              </div>
+              <button
+                onClick={e=>{e.stopPropagation();navigate('/case-study/pet-protect')}}
+                className="ca"
+                aria-label="Pet Protect case study"
+                style={{position:'static',border:'1px solid rgba(91,185,196,.2)',background:'rgba(91,185,196,.07)',color:'rgba(91,185,196,.6)',cursor:'none',flexShrink:0}}
+              >↗</button>
             </div>
           </div>
         </article>
 
-        {/* 07 OSLO PET — Website */}
-        <article className="card b-oslo bg-oslo rv d2" style={{cursor:'none',opacity:matches('oslo',filter)?1:.15,transition:'opacity .35s ease'}} onClick={()=>navigate('/case-study/oslo-pet')}>
+        {/* 07 OSLO PET */}
+        <article
+          className="card b-oslo rv d2"
+          style={{cursor:'none',opacity:matches('oslo',filter)?1:.15,transition:'opacity .35s ease'}}
+          onClick={()=>navigate('/case-study/oslo-pet')}
+        >
           <div className="cl" style={{background:'#5BB9C4'}} /><div className="cn">07</div>
-          <button onClick={e=>{e.stopPropagation();navigate('/case-study/oslo-pet')}} className="ca" aria-label="Oslo Pet Insurance case study" style={{zIndex:2,border:'none',background:'transparent',cursor:'none'}}>↗</button>
-          <div className="ci" style={{zIndex:1,pointerEvents:'none'}}>
-            <span className="ctag" style={{color:'#5BB9C4'}}>Web App · Pet Insurance · Oslo</span>
-            <h2 className="ctitle">Oslo Pet Insurance —<br />Pet Cloud Portal</h2>
-            <p className="cdesc">Customer-facing web portal for policy management, multi-pet tracking, real-time claims, and vet access — shipped to oslopetinsurance.pet.</p>
-            <div className="cms">
-              <div className="cm"><b>6</b>core flows</div>
-              <div className="cm"><b>35+</b>components</div>
-              <div className="cm"><b>2</b>platforms</div>
+          <div className="cimg bg-oslo" />
+          <div className="cib">
+            <div>
+              <span className="ctag" style={{color:'#5BB9C4'}}>Web App · Pet Insurance · Oslo</span>
+              <h2 className="ctitle">Oslo Pet Insurance —<br />Pet Cloud Portal</h2>
+              <p className="cdesc">Customer-facing web portal for policy management, multi-pet tracking, real-time claims, and vet access — shipped to oslopetinsurance.pet.</p>
+            </div>
+            <div style={{ display:'flex',justifyContent:'space-between',alignItems:'flex-end' }}>
+              <div className="cms">
+                <div className="cm"><b style={{color:'#5BB9C4'}}>6</b>core flows</div>
+                <div className="cm"><b style={{color:'#5BB9C4'}}>35+</b>components</div>
+                <div className="cm"><b style={{color:'#5BB9C4'}}>2</b>platforms</div>
+              </div>
+              <button
+                onClick={e=>{e.stopPropagation();navigate('/case-study/oslo-pet')}}
+                className="ca"
+                aria-label="Oslo Pet Insurance case study"
+                style={{position:'static',border:'1px solid rgba(91,185,196,.2)',background:'rgba(91,185,196,.07)',color:'rgba(91,185,196,.6)',cursor:'none',flexShrink:0}}
+              >↗</button>
             </div>
           </div>
         </article>
 
         {/* ── PERSONAL CARDS ── */}
 
-        {/* ABOUT CARD */}
+        {/* ABOUT */}
         <article className="card b-about bg-about rv d2">
           <div style={{ position:'absolute',inset:0,padding:30,display:'flex',flexDirection:'column',justifyContent:'space-between' }}>
             <div>
@@ -268,6 +354,7 @@ export default function Work() {
             <div style={{ fontSize:'.7rem',color:'var(--muted)',marginTop:6 }}>Financial-grade design system<br />50% dev efficiency gain</div>
           </div>
         </article>
+
       </div>
     </section>
   )

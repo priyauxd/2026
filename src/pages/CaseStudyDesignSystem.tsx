@@ -1107,8 +1107,19 @@ export default function CaseStudyDesignSystem() {
         {/* ── TOGGLE SWITCH COMPONENT ── */}
         <section style={SECT}>
           <h2 style={{ ...SH, textAlign: 'center', marginBottom: 12 }}>Toggle Switch Component</h2>
-          <p style={{ ...SP, textAlign: 'center', maxWidth: 640, margin: '0 auto 48px' }}>
+          <p style={{ ...SP, textAlign: 'center', maxWidth: 640, margin: '0 auto 16px' }}>
             Comprehensive toggle switch component with multiple sizes, states, and icon support
+          </p>
+          <p style={{ textAlign: 'center', marginBottom: 48, fontSize: '.78rem', color: 'var(--muted)' }}>
+            See the usage &amp; integration of toggle —{' '}
+            <a
+              href="https://osloinsurance.pet/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: '#ad3278', textDecoration: 'none', borderBottom: '1px solid rgba(173,50,120,.35)', paddingBottom: 1 }}
+            >
+              click here
+            </a>
           </p>
 
           {/* Toggle showcase */}
