@@ -109,7 +109,7 @@ export default function CaseStudyOsloPet() {
 
       {/* ── NAV ── */}
       <nav style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100, display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '18px var(--pad)', borderBottom: '1px solid var(--bdr2)', background: 'rgba(8,8,15,.92)', backdropFilter: 'blur(12px)' }}>
-        <button onClick={() => navigate('/')} style={{ background: 'none', border: 'none', color: 'var(--white)', fontFamily: 'Outfit, sans-serif', fontSize: '.82rem', cursor: 'none', opacity: .75 }}>
+        <button onClick={() => window.location.href = 'https://priyauxd.github.io/2026/'} style={{ background: 'none', border: 'none', color: 'var(--white)', fontFamily: 'Outfit, sans-serif', fontSize: '.82rem', cursor: 'none', opacity: .75 }}>
           ← Back to portfolio
         </button>
         <div style={{ fontSize: '.6rem', fontWeight: 500, letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--muted)' }}>
@@ -438,7 +438,7 @@ export default function CaseStudyOsloPet() {
                 <a href="mailto:priyamvada.s.m@gmail.com" style={{ padding: '12px 28px', background: 'var(--gold)', color: 'var(--black)', borderRadius: 8, fontSize: '.78rem', fontWeight: 600, textDecoration: 'none', cursor: 'none', letterSpacing: '.04em' }}>
                   Get in touch →
                 </a>
-                <button onClick={() => navigate('/')} style={{ padding: '12px 28px', background: 'transparent', border: '1px solid var(--bdr2)', color: 'var(--white)', borderRadius: 8, fontSize: '.78rem', cursor: 'none', fontFamily: 'Outfit, sans-serif' }}>
+                <button onClick={() => window.location.href = 'https://priyauxd.github.io/2026/'} style={{ padding: '12px 28px', background: 'transparent', border: '1px solid var(--bdr2)', color: 'var(--white)', borderRadius: 8, fontSize: '.78rem', cursor: 'none', fontFamily: 'Outfit, sans-serif' }}>
                   ← Back to portfolio
                 </button>
               </div>

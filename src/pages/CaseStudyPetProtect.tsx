@@ -230,10 +230,10 @@ export default function CaseStudyPetProtect() {
 
         {/* NAV */}
         <nav style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 300, display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '20px var(--pad)', background: 'linear-gradient(180deg,rgba(8,8,15,.97) 0%,transparent 100%)' }}>
-          <a href="/" style={{ fontFamily: '"Cormorant Garamond",Georgia,serif', fontSize: '1.1rem', fontWeight: 600, color: 'var(--white)', textDecoration: 'none', letterSpacing: '.04em', cursor: 'none' }}>
+          <a href="https://priyauxd.github.io/2026/" style={{ fontFamily: '"Cormorant Garamond",Georgia,serif', fontSize: '1.1rem', fontWeight: 600, color: 'var(--white)', textDecoration: 'none', letterSpacing: '.04em', cursor: 'none' }}>
             PRIYAMVADA <span style={{ color: 'var(--gold)' }}>·</span> UX
           </a>
-          <a href="/" style={{ fontSize: '.72rem', fontWeight: 400, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--muted)', textDecoration: 'none', cursor: 'none', transition: 'color .2s' }}
+          <a href="https://priyauxd.github.io/2026/" style={{ fontSize: '.72rem', fontWeight: 400, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--muted)', textDecoration: 'none', cursor: 'none', transition: 'color .2s' }}
             onMouseEnter={e => (e.currentTarget.style.color = 'var(--gold)')}
             onMouseLeave={e => (e.currentTarget.style.color = 'var(--muted)')}
           >← Back to Work</a>
@@ -552,7 +552,7 @@ export default function CaseStudyPetProtect() {
               onMouseEnter={e => ((e.currentTarget as HTMLElement).style.background = 'var(--gold2)')}
               onMouseLeave={e => ((e.currentTarget as HTMLElement).style.background = 'var(--gold)')}
             >Get in touch →</a>
-            <a href="/"
+            <a href="https://priyauxd.github.io/2026/"
               style={{ display: 'inline-block', fontSize: '.72rem', fontWeight: 500, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gold)', border: '1px solid var(--border)', padding: '13px 28px', textDecoration: 'none', cursor: 'none', transition: 'border-color .25s,color .25s' }}
               onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = 'var(--gold)'; (e.currentTarget as HTMLElement).style.color = 'var(--white)' }}
               onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'var(--border)'; (e.currentTarget as HTMLElement).style.color = 'var(--gold)' }}

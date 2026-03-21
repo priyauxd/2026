@@ -204,10 +204,10 @@ export default function CaseStudyOmnichannel() {
 
         {/* NAV */}
         <nav style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 300, display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '20px var(--pad)', background: 'linear-gradient(180deg,rgba(8,8,15,.97) 0%,transparent 100%)' }}>
-          <a href="/" style={{ fontFamily: '"Cormorant Garamond",Georgia,serif', fontSize: '1.1rem', fontWeight: 600, color: 'var(--white)', textDecoration: 'none', letterSpacing: '.04em', cursor: 'none' }}>
+          <a href="https://priyauxd.github.io/2026/" style={{ fontFamily: '"Cormorant Garamond",Georgia,serif', fontSize: '1.1rem', fontWeight: 600, color: 'var(--white)', textDecoration: 'none', letterSpacing: '.04em', cursor: 'none' }}>
             PRIYAMVADA <span style={{ color: 'var(--gold)' }}>·</span> UX
           </a>
-          <a href="/" style={{ fontSize: '.72rem', fontWeight: 400, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--muted)', textDecoration: 'none', cursor: 'none', transition: 'color .2s' }}
+          <a href="https://priyauxd.github.io/2026/" style={{ fontSize: '.72rem', fontWeight: 400, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--muted)', textDecoration: 'none', cursor: 'none', transition: 'color .2s' }}
             onMouseEnter={e => (e.currentTarget.style.color = 'var(--gold)')}
             onMouseLeave={e => (e.currentTarget.style.color = 'var(--muted)')}
           >← Back to Work</a>
@@ -331,6 +331,59 @@ export default function CaseStudyOmnichannel() {
               ))}
             </div>
           </div>
+        </section>
+
+        {/* ── STAKEHOLDER BRIEFING ── */}
+        <section style={{ maxWidth: 1100, margin: '0 auto', padding: '80px var(--pad) 0' }}>
+          <h2 style={{ fontFamily: '"Cormorant Garamond",Georgia,serif', fontSize: 'clamp(1.5rem,2.8vw,2.4rem)', fontWeight: 300, lineHeight: 1.1, marginBottom: 12, color: 'var(--white)' }}>
+            What We Heard: Highlights from the First Briefing
+          </h2>
+          <p style={{ fontSize: '.9rem', lineHeight: 1.85, color: 'var(--muted)', marginBottom: 40, maxWidth: 780 }}>
+            Stakeholder interviews surfaced three recurring themes — fragmented tooling, invisible SLAs on WhatsApp, and the operational cost of context loss at every channel handoff.
+          </p>
+
+          {/* 3-column masonry quote grid — 9 unique stakeholders */}
+          {(() => {
+            const people = [
+              // col 1
+              { name: 'Khalid Mansour',     role: 'Head of Product',             avatar: 'https://api.dicebear.com/9.x/avataaars/svg?seed=Khalid&backgroundColor=1a0a2e&radius=50&accessories=prescription01&clothingColor=3c4f5c', quote: "We need agents to handle WhatsApp and voice from a single screen — today they're switching between three tools and losing context every single time." },
+              { name: 'Sara Al Rashidi',    role: 'Senior Product Manager',      avatar: 'https://api.dicebear.com/9.x/lorelei/svg?seed=Sara99&backgroundColor=2a1a3e&radius=50', quote: "The product needs to ship within 5 months. We're prioritising conversation continuity and speed over feature breadth. Agents can't be slow." },
+              { name: 'Omar Faris',         role: 'Engineering Lead',            avatar: 'https://api.dicebear.com/9.x/avataaars/svg?seed=OmarF22&backgroundColor=0e0a28&radius=50&top=shortRounded&clothingColor=262e33', quote: "Supervisors need real-time visibility of agent availability — right now they have to walk the floor to check who's free for an escalation." },
+              // col 2
+              { name: 'Nour Al Mutairi',   role: 'Contact Centre Director',     avatar: 'https://api.dicebear.com/9.x/lorelei/svg?seed=NourM77&backgroundColor=0a2a20&radius=50', quote: "Our SLA for WhatsApp must match voice. Agents treat it as a secondary channel because there's no way to measure it — that has to change on day one." },
+              { name: 'Ahmed Bakr',         role: 'Operations Manager',          avatar: 'https://api.dicebear.com/9.x/avataaars/svg?seed=AhmedB55&backgroundColor=0d4030&radius=50&top=dreads01&accessories=kurt', quote: "We handle over 100,000 interactions a day. Template management has to be instant — agents cannot be scrolling through a list while a customer is waiting." },
+              { name: 'Hessa Al Dhaheri',  role: 'Quality Assurance Lead',      avatar: 'https://api.dicebear.com/9.x/lorelei/svg?seed=HessaD44&backgroundColor=082a18&radius=50', quote: "Routing logic needs to be smart from launch. Tier 1 queries should never reach a senior agent. Skill-based routing isn't optional — it's operational." },
+              // col 3
+              { name: 'Priya Nair',         role: 'Customer Experience Manager', avatar: 'https://api.dicebear.com/9.x/lorelei/svg?seed=PriyaN88&backgroundColor=2a1000&radius=50', quote: "Customers repeat themselves every time they switch from WhatsApp to a call. That repetition is the number one thing destroying our CSAT scores." },
+              { name: 'Mohammed Al Hamdan', role: 'Business Analyst',            avatar: 'https://api.dicebear.com/9.x/avataaars/svg?seed=MohammedH11&backgroundColor=1a1a0a&radius=50&top=frizzle&clothingColor=3c4f5c', quote: "We want a unified agent status — 'Available on WhatsApp' and 'Available on Voice' should be one state, not something agents manage separately." },
+              { name: 'Fatima Al Zaabi',    role: 'UX Researcher',              avatar: 'https://api.dicebear.com/9.x/lorelei/svg?seed=FatimaZ33&backgroundColor=2e1a00&radius=50', quote: "Rich media is non-negotiable. Customers send photos of receipts, IDs, and damaged goods. If agents can't view those in context, the whole flow breaks down." },
+            ]
+            const cols = [people.slice(0,3), people.slice(3,6), people.slice(6,9)]
+            return (
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16, alignItems: 'start' }}>
+                {cols.map((col, ci) => (
+                  <div key={ci} style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+                    {col.map(({ name, role, avatar, quote }) => (
+                      <div key={name} style={{ background: 'var(--s2)', border: '1px solid var(--bdr2)', borderRadius: 14, padding: '22px 24px' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
+                          <img
+                            src={avatar}
+                            alt={name}
+                            style={{ width: 40, height: 40, borderRadius: '50%', border: '1px solid rgba(201,168,76,.2)', flexShrink: 0, display: 'block' }}
+                          />
+                          <div>
+                            <div style={{ fontSize: '.82rem', fontWeight: 500, color: 'var(--white)', lineHeight: 1.2 }}>{name}</div>
+                            <div style={{ fontSize: '.7rem', color: 'var(--muted)' }}>{role}</div>
+                          </div>
+                        </div>
+                        <p style={{ fontSize: '.84rem', lineHeight: 1.75, color: 'rgba(240,237,230,.7)', margin: 0 }}>{quote}</p>
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            )
+          })()}
         </section>
 
         {/* ── PERSONA ── */}

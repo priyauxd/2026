@@ -173,7 +173,9 @@ export default function Work() {
           onClick={()=>navigate('/case-study/omnichannel')}
         >
           <div className="cl" /><div className="cn">04</div>
-          <div className="cimg bg-wa" />
+          <div className="cimg bg-wa">
+            <img src={`${import.meta.env.BASE_URL}images/wa-thumb.png`} alt="Omnichannel WhatsApp & Voice platform" />
+          </div>
           <div className="cib">
             <div>
               <span className="ctag">Conversational AI · Mobile · B2B</span>

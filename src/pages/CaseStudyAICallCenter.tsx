@@ -118,10 +118,10 @@ export default function CaseStudyAICallCenter() {
 
         {/* NAV */}
         <nav style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 300, display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '20px var(--pad)', background: 'linear-gradient(180deg,rgba(8,8,15,.97) 0%,transparent 100%)' }}>
-          <a href="/" style={{ fontFamily: '"Cormorant Garamond",Georgia,serif', fontSize: '1.1rem', fontWeight: 600, color: 'var(--white)', textDecoration: 'none', letterSpacing: '.04em', cursor: 'none' }}>
+          <a href="https://priyauxd.github.io/2026/" style={{ fontFamily: '"Cormorant Garamond",Georgia,serif', fontSize: '1.1rem', fontWeight: 600, color: 'var(--white)', textDecoration: 'none', letterSpacing: '.04em', cursor: 'none' }}>
             PRIYAMVADA <span style={{ color: 'var(--gold)' }}>·</span> UX
           </a>
-          <a href="/" style={{ fontSize: '.72rem', fontWeight: 400, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--muted)', textDecoration: 'none', cursor: 'none', transition: 'color .2s' }}
+          <a href="https://priyauxd.github.io/2026/" style={{ fontSize: '.72rem', fontWeight: 400, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--muted)', textDecoration: 'none', cursor: 'none', transition: 'color .2s' }}
             onMouseEnter={e => (e.currentTarget.style.color = 'var(--gold)')}
             onMouseLeave={e => (e.currentTarget.style.color = 'var(--muted)')}
           >← Back to Work</a>
@@ -776,7 +776,7 @@ export default function CaseStudyAICallCenter() {
         {/* ── FOOTER ── */}
         <footer style={{ borderTop: '1px solid var(--bdr2)', padding: '40px var(--pad)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <span style={{ fontSize: '.72rem', color: 'var(--muted)' }}>© 2024 Priyamvada Khanolkar</span>
-          <a href="/" style={{ fontSize: '.66rem', fontWeight: 500, letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--gold)', textDecoration: 'none', cursor: 'none' }}>
+          <a href="https://priyauxd.github.io/2026/" style={{ fontSize: '.66rem', fontWeight: 500, letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--gold)', textDecoration: 'none', cursor: 'none' }}>
             ← Back to Work
           </a>
         </footer>
