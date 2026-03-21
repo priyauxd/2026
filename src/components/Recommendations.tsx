@@ -17,7 +17,7 @@ const RECS = [
 
 export default function Recommendations() {
   return (
-    <section style={{ padding: '100px var(--pad) 0' }}>
+    <section className="recs-sec" style={{ padding: '100px var(--pad) 0' }}>
       {/* header */}
       <div className="rv" style={{ textAlign: 'center', marginBottom: 56 }}>
         <h2 style={{ fontFamily: '"Cormorant Garamond",Georgia,serif', fontSize: 'clamp(1.9rem,3.8vw,3.2rem)', fontWeight: 300, lineHeight: 1, marginBottom: 14 }}>

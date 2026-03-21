@@ -21,6 +21,7 @@
     --bdr2:   rgba(240,237,230,.07);
     --gap:    10px;
     --pad:    56px;
+    --max-w:  1440px;
     --nav-bg: linear-gradient(180deg,rgba(8,8,15,.97) 0%,transparent 100%);
   }
 
@@ -66,6 +67,19 @@
   transition:width .3s,height .3s,border-color .3s;
 }
 body.hov #ring { width:52px;height:52px;border-color:var(--gold); }
+
+/* ─── PAGE LAYOUT ─── */
+.work-sec,
+#home,
+#about,
+#process,
+#contact,
+footer,
+.recs-sec {
+  max-width: var(--max-w);
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* ─── BENTO GRID ─── */
 .bento {

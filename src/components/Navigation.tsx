@@ -37,12 +37,11 @@ export default function Navigation() {
     <nav
       style={{
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 300,
-        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-        padding: '20px var(--pad)',
         background: 'var(--nav-bg)',
       }}
       aria-label="Main navigation"
     >
+      <div style={{ maxWidth: 'var(--max-w)', margin: '0 auto', padding: '20px var(--pad)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
       <a
         href="#/"
         style={{
@@ -97,6 +96,7 @@ export default function Navigation() {
         >
           {isLight ? <MoonIcon /> : <SunIcon />}
         </button>
+      </div>
       </div>
     </nav>
   )
