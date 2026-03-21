@@ -113,13 +113,44 @@ export default function Work() {
           </div>
         </article>
 
-        {/* 02 AI CALL CENTER */}
+        {/* 02 OMNICHANNEL */}
+        <article
+          className="card b-wa rv d1"
+          style={{cursor:'none',opacity:matches('wa',filter)?1:.15,transition:'opacity .35s ease'}}
+          onClick={()=>navigate('/case-study/omnichannel')}
+        >
+          <div className="cl" /><div className="cn">02</div>
+          <div className="cimg bg-wa">
+            <img src={`${import.meta.env.BASE_URL}images/wa-thumb.png`} alt="Omnichannel WhatsApp & Voice platform" />
+          </div>
+          <div className="cib">
+            <div>
+              <span className="ctag">Conversational AI · Mobile · B2B</span>
+              <h2 className="ctitle">Omnichannel Platform —<br />WhatsApp &amp; Voice, Unified</h2>
+              <p className="cdesc">Unified agent workspace bringing WhatsApp Business and voice conversations together — eliminating context-switching that was adding 60% to response times.</p>
+            </div>
+            <div style={{ display:'flex',justifyContent:'space-between',alignItems:'flex-end' }}>
+              <div className="cms">
+                <div className="cm"><b>60%</b>faster responses</div>
+                <div className="cm"><b>70%</b>template savings</div>
+              </div>
+              <button
+                onClick={e=>{e.stopPropagation();navigate('/case-study/omnichannel')}}
+                className="ca"
+                aria-label="Omnichannel case study"
+                style={{position:'static',border:'1px solid rgba(201,168,76,.16)',background:'rgba(201,168,76,.07)',cursor:'none',flexShrink:0}}
+              >↗</button>
+            </div>
+          </div>
+        </article>
+
+        {/* 03 AI CALL CENTER */}
         <article
           className="card b-aicall rv d1"
           style={{cursor:'none',opacity:matches('aicall',filter)?1:.15,transition:'opacity .35s ease'}}
           onClick={()=>navigate('/case-study/ai-call-center')}
         >
-          <div className="cl" /><div className="cn">02</div>
+          <div className="cl" /><div className="cn">03</div>
           <div className="cimg bg-aicall">
             <img src={`${import.meta.env.BASE_URL}images/aicall-thumb.png`} alt="AI Call Center intelligence dashboard" />
           </div>
@@ -145,64 +176,13 @@ export default function Work() {
           </div>
         </article>
 
-        {/* 03 AI COMPLIANCE */}
-        <article
-          className="card b-ai rv d2"
-          style={{opacity:matches('ai',filter)?1:.15,transition:'opacity .35s ease'}}
-        >
-          <div className="cl" /><div className="cn">03</div>
-          <div className="cimg bg-ai" />
-          <div className="cib">
-            <div>
-              <span className="ctag">AI · B2B Banking</span>
-              <h2 className="ctitle">AI-Powered Compliance<br />Scorecard Platform</h2>
-            </div>
-            <div style={{ display:'flex',justifyContent:'space-between',alignItems:'flex-end' }}>
-              <div className="cms">
-                <div className="cm"><b>60%</b>faster analyst review</div>
-              </div>
-              <a href="#" className="ca" style={{position:'static',flexShrink:0}}>↗</a>
-            </div>
-          </div>
-        </article>
-
-        {/* 04 OMNICHANNEL */}
-        <article
-          className="card b-wa rv d3"
-          style={{cursor:'none',opacity:matches('wa',filter)?1:.15,transition:'opacity .35s ease'}}
-          onClick={()=>navigate('/case-study/omnichannel')}
-        >
-          <div className="cl" /><div className="cn">04</div>
-          <div className="cimg bg-wa">
-            <img src={`${import.meta.env.BASE_URL}images/wa-thumb.png`} alt="Omnichannel WhatsApp & Voice platform" />
-          </div>
-          <div className="cib">
-            <div>
-              <span className="ctag">Conversational AI · Mobile · B2B</span>
-              <h2 className="ctitle">Omnichannel Platform —<br />WhatsApp &amp; Voice, Unified</h2>
-            </div>
-            <div style={{ display:'flex',justifyContent:'space-between',alignItems:'flex-end' }}>
-              <div className="cms">
-                <div className="cm"><b>60%</b>faster responses</div>
-                <div className="cm"><b>70%</b>template savings</div>
-              </div>
-              <button
-                onClick={e=>{e.stopPropagation();navigate('/case-study/omnichannel')}}
-                className="ca"
-                aria-label="Omnichannel case study"
-                style={{position:'static',border:'1px solid rgba(201,168,76,.16)',background:'rgba(201,168,76,.07)',cursor:'none',flexShrink:0}}
-              >↗</button>
-            </div>
-          </div>
-        </article>
-
-        {/* 05 DESIGN SYSTEM */}
+        {/* 04 DESIGN SYSTEM */}
         <article
           className="card b-ds rv d1"
           style={{cursor:'none',opacity:matches('ds',filter)?1:.15,transition:'opacity .35s ease'}}
           onClick={()=>navigate('/case-study/design-system')}
         >
-          <div className="cl" /><div className="cn">05</div>
+          <div className="cl" /><div className="cn">04</div>
           <div className="cimg bg-ds" />
           <div className="cib">
             <div>
@@ -230,7 +210,7 @@ export default function Work() {
           style={{cursor:'none',opacity:matches('pet',filter)?1:.15,transition:'opacity .35s ease'}}
           onClick={()=>navigate('/case-study/pet-protect')}
         >
-          <div className="cl" style={{background:'#5BB9C4'}} /><div className="cn">06</div>
+          <div className="cl" style={{background:'#5BB9C4'}} /><div className="cn">05</div>
           <div className="cimg bg-pet" />
           <div className="cib">
             <div>
@@ -260,7 +240,7 @@ export default function Work() {
           style={{cursor:'none',opacity:matches('oslo',filter)?1:.15,transition:'opacity .35s ease'}}
           onClick={()=>navigate('/case-study/oslo-pet')}
         >
-          <div className="cl" style={{background:'#5BB9C4'}} /><div className="cn">07</div>
+          <div className="cl" style={{background:'#5BB9C4'}} /><div className="cn">06</div>
           <div className="cimg bg-oslo" />
           <div className="cib">
             <div>
