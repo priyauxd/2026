@@ -85,7 +85,7 @@ footer,
 .bento {
   display:grid;
   grid-template-columns:repeat(12,1fr);
-  grid-template-rows:700px 320px 400px 280px 320px;
+  grid-template-rows:700px 700px 400px 280px 320px;
   gap:var(--gap);
   margin-bottom:100px;
 }
@@ -104,9 +104,9 @@ footer,
 .b-creds  { grid-column:9/13;  grid-row:4/5; margin-top:60px; }
 /* Row 5 — stat */
 .b-stat   { grid-column:1/4;   grid-row:5/6; }
-/* Row 1 hero cards — tall image showing full phone mockup */
-.b-raqam .cimg, .b-wa .cimg { flex:0 0 62%; }
-.b-raqam .cimg img, .b-wa .cimg img { object-fit:contain; }
+/* Row 1 hero cards + AI Call Center + Design System — tall image showing full mockup */
+.b-raqam .cimg, .b-wa .cimg, .b-aicall .cimg, .b-ds .cimg { flex:0 0 62%; }
+.b-raqam .cimg img, .b-wa .cimg img, .b-aicall .cimg img, .b-ds .cimg img { object-fit:contain; }
 
 /* ─── CARD BASE ─── */
 .card {

@@ -183,7 +183,9 @@ export default function Work() {
           onClick={()=>navigate('/case-study/design-system')}
         >
           <div className="cl" /><div className="cn">04</div>
-          <div className="cimg bg-ds" />
+          <div className="cimg bg-ds">
+            <img src={`${import.meta.env.BASE_URL}images/ds-thumb.png`} alt="Core Design System components" />
+          </div>
           <div className="cib">
             <div>
               <span className="ctag">Design Systems · B2B Finance</span>
