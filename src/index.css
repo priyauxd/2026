@@ -85,7 +85,7 @@ footer,
 .bento {
   display:grid;
   grid-template-columns:repeat(12,1fr);
-  grid-template-rows:700px 700px 400px 280px 320px;
+  grid-template-rows:700px 700px 700px 280px 320px;
   gap:var(--gap);
   margin-bottom:100px;
 }
@@ -95,18 +95,18 @@ footer,
 /* Row 2 — ai call center | design system */
 .b-aicall { grid-column:1/7;   grid-row:2/3; }
 .b-ds     { grid-column:7/13;  grid-row:2/3; }
-/* Row 3 — pet protect | oslo */
-.b-pet    { grid-column:1/7;   grid-row:3/4; }
-.b-oslo   { grid-column:7/13;  grid-row:3/4; }
+/* Row 3 — oslo | pet protect */
+.b-oslo   { grid-column:1/7;   grid-row:3/4; }
+.b-pet    { grid-column:7/13;  grid-row:3/4; }
 /* Row 4 — personal cards */
 .b-about  { grid-column:1/5;   grid-row:4/5; margin-top:60px; }
 .b-avail  { grid-column:5/9;   grid-row:4/5; margin-top:60px; }
 .b-creds  { grid-column:9/13;  grid-row:4/5; margin-top:60px; }
 /* Row 5 — stat */
 .b-stat   { grid-column:1/4;   grid-row:5/6; }
-/* Row 1 hero cards + AI Call Center + Design System — tall image showing full mockup */
-.b-raqam .cimg, .b-wa .cimg, .b-aicall .cimg, .b-ds .cimg { flex:0 0 62%; }
-.b-raqam .cimg img, .b-wa .cimg img, .b-aicall .cimg img, .b-ds .cimg img { object-fit:contain; }
+/* Hero cards — tall image showing full mockup */
+.b-raqam .cimg, .b-wa .cimg, .b-aicall .cimg, .b-ds .cimg, .b-oslo .cimg { flex:0 0 62%; }
+.b-raqam .cimg img, .b-wa .cimg img, .b-aicall .cimg img, .b-ds .cimg img, .b-oslo .cimg img { object-fit:contain; }
 
 /* ─── CARD BASE ─── */
 .card {

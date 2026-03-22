@@ -243,7 +243,9 @@ export default function Work() {
           onClick={()=>navigate('/case-study/oslo-pet')}
         >
           <div className="cl" style={{background:'#5BB9C4'}} /><div className="cn">06</div>
-          <div className="cimg bg-oslo" />
+          <div className="cimg bg-oslo">
+            <img src={`${import.meta.env.BASE_URL}images/oslo-thumb.png`} alt="Oslo Pet Insurance portal" />
+          </div>
           <div className="cib">
             <div>
               <span className="ctag" style={{color:'#5BB9C4'}}>Web App · Pet Insurance · Oslo</span>
