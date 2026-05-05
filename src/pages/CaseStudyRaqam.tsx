@@ -25,10 +25,10 @@ const EARLY_SECTIONS = [
 
 const COMPETITORS = [
   {
-    name: 'Emirates NBD',
-    category: 'Traditional UAE Banking',
-    strengths: ['Clean, minimal interface', 'Reliable core banking'],
-    gaps: ['Limited transfer transparency', 'No spending insights'],
+    name: 'RAKBank',
+    category: 'Retail-focused UAE Banking',
+    strengths: ['Clean, user-friendly interface consistently praised in app reviews', 'Smooth core banking — balance checks, transfers, bill payments without friction', 'AI-powered transformation — reduced compliance processing and AI assistant in-app'],
+    gaps: ["Card management is weak — users can't see or manage multiple debit cards or set priority", 'No meaningful spending insights or financial wellness tools', 'Limited features compared to larger UAE banks'],
   },
   {
     name: 'ADCB',
@@ -43,10 +43,10 @@ const COMPETITORS = [
     gaps: ['Not UAE-banking integrated', 'Limited local features'],
   },
   {
-    name: 'Mashreq',
-    category: 'Digital Banking',
-    strengths: ['Strong traditional banking', 'Good security features'],
-    gaps: ['Weak financial wellness tools', 'Outdated interface'],
+    name: 'FAB',
+    category: "UAE's Largest Full-Service Bank",
+    strengths: ["Consistently ranked safest bank in UAE and Middle East by Global Finance", '2026 app refresh — faster login, better biometrics, Quick Actions dashboard', 'Strong institutional trust and widest product range in market'],
+    gaps: ['Charges lack transparency — unexplained deductions with no breakdown in-app', 'Supplementary cards not visible in the app — a basic feature gap frustrating users', 'Weak spending intelligence and no proactive financial insights'],
   },
 ]
 

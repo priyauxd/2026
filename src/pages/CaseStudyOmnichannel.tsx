@@ -26,6 +26,37 @@ const IMG_FILTER_5    = 'https://www.figma.com/api/mcp/asset/2d97063d-c3cb-404c-
 
 /* ─── DATA ────────────────────────────────────────────────── */
 
+const COMPETITOR_BANKS = [
+  {
+    name: 'RAKBank',
+    tag: 'Retail-focused UAE banking',
+    works: [
+      'Clean, user-friendly interface consistently praised in app reviews',
+      'Smooth core banking tasks — balance checks, transfers, bill payments all work without friction',
+      'Invested in AI-powered digital transformation — reduced compliance processing significantly and introduced an AI assistant in the mobile app',
+    ],
+    gaps: [
+      "Card management is weak — users can't easily see or manage multiple debit cards or set card priority within the app",
+      'No meaningful spending insights or financial wellness tools',
+      'Limited features compared to larger UAE banks',
+    ],
+  },
+  {
+    name: 'FAB',
+    tag: "UAE's largest full-service bank",
+    works: [
+      "UAE's largest bank, consistently ranked safest bank in the UAE and Middle East by Global Finance",
+      '2026 app update introduced refreshed interface, faster login, better biometrics, and a Quick Actions dashboard',
+      'Strong institutional trust and wide product range',
+    ],
+    gaps: [
+      'Charges lack transparency — users report unexplained deductions with no clear breakdown in the app',
+      'Supplementary cards not visible in the app — a basic feature gap that frustrates users',
+      'Weak spending intelligence and no proactive financial insights',
+    ],
+  },
+]
+
 const OUTCOMES = [
   { n: '60%', l: 'Faster Response Times' },
   { n: '5 Mo', l: 'Design to Launch' },
@@ -229,13 +260,32 @@ export default function CaseStudyOmnichannel() {
             <p style={{ fontSize: 'clamp(.85rem,1.1vw,1rem)', lineHeight: 1.75, color: 'var(--muted)', maxWidth: 560, margin: '0 auto 48px' }}>
               Designing a unified agent workspace that brings WhatsApp Business and voice conversations together — eliminating the context-switching that was adding 60% to response times.
             </p>
-            <div style={{ display: 'flex', gap: 48, justifyContent: 'center', flexWrap: 'wrap', paddingTop: 32, borderTop: '1px solid var(--bdr2)', marginBottom: 64 }}>
+            <div style={{ display: 'flex', gap: 48, justifyContent: 'center', flexWrap: 'wrap', paddingTop: 32, borderTop: '1px solid var(--bdr2)', marginBottom: 32 }}>
               {[['Role','Lead Product Designer'],['Platform','Web · SaaS'],['Timeline','5 months'],['Team','1 PM · 3 Engineers · 1 QA']].map(([k,v]) => (
                 <div key={k}>
                   <div style={{ fontSize: '.6rem', fontWeight: 500, letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 5 }}>{k}</div>
                   <div style={{ fontSize: '.85rem', color: 'var(--white)' }}>{v}</div>
                 </div>
               ))}
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 48 }}>
+              <a
+                href="https://www.youtube.com/watch?v=nkf9ZebvCfA"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex', alignItems: 'center', gap: 10,
+                  padding: '12px 28px', borderRadius: 40,
+                  background: 'var(--gold)', color: 'var(--black)',
+                  fontSize: '.72rem', fontWeight: 600, letterSpacing: '.14em', textTransform: 'uppercase',
+                  textDecoration: 'none', cursor: 'none', transition: 'opacity .2s',
+                }}
+                onMouseEnter={e => (e.currentTarget.style.opacity = '.85')}
+                onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                View Demo
+              </a>
             </div>
           </div>
 
@@ -330,6 +380,48 @@ export default function CaseStudyOmnichannel() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* ── COMPETITIVE ANALYSIS ── */}
+        <section style={{ maxWidth: 1100, margin: '0 auto', padding: '80px var(--pad) 0' }}>
+          <h2 style={{ fontFamily: '"Cormorant Garamond",Georgia,serif', fontSize: 'clamp(1.5rem,2.8vw,2.4rem)', fontWeight: 300, lineHeight: 1.1, marginBottom: 12, color: 'var(--white)' }}>
+            Competitive Landscape
+          </h2>
+          <p style={{ fontSize: '.9rem', lineHeight: 1.85, color: 'var(--muted)', marginBottom: 40, maxWidth: 780 }}>
+            Benchmarking the UAE retail banking digital experience revealed a consistent pattern: strong core functionality with persistent gaps in card management, transparency, and proactive financial intelligence.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
+            {COMPETITOR_BANKS.map(({ name, tag, works, gaps }) => (
+              <div key={name} style={{ background: 'var(--s1)', border: '1px solid var(--bdr2)', borderRadius: 14, padding: '32px 28px', display: 'flex', flexDirection: 'column', gap: 24 }}>
+                <div>
+                  <div style={{ fontSize: '1rem', fontWeight: 500, color: 'var(--white)', marginBottom: 4 }}>{name}</div>
+                  <div style={{ fontSize: '.7rem', letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--muted)' }}>{tag}</div>
+                </div>
+                <div>
+                  <div style={{ fontSize: '.6rem', fontWeight: 500, letterSpacing: '.18em', textTransform: 'uppercase', color: '#5BB9C4', marginBottom: 12 }}>What Works</div>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                    {works.map((w, i) => (
+                      <div key={i} style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
+                        <span style={{ color: '#5BB9C4', flexShrink: 0, fontSize: '.75rem', marginTop: 2 }}>✓</span>
+                        <span style={{ fontSize: '.8rem', lineHeight: 1.65, color: 'rgba(240,237,230,.7)' }}>{w}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <div style={{ fontSize: '.6rem', fontWeight: 500, letterSpacing: '.18em', textTransform: 'uppercase', color: '#E47C6E', marginBottom: 12 }}>Gaps Found</div>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                    {gaps.map((g, i) => (
+                      <div key={i} style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
+                        <span style={{ color: '#E47C6E', flexShrink: 0, fontSize: '.75rem', marginTop: 2 }}>✗</span>
+                        <span style={{ fontSize: '.8rem', lineHeight: 1.65, color: 'rgba(240,237,230,.7)' }}>{g}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
