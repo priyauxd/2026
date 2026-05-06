@@ -28,31 +28,31 @@ const IMG_FILTER_5    = 'https://www.figma.com/api/mcp/asset/2d97063d-c3cb-404c-
 
 const COMPETITOR_BANKS = [
   {
-    name: 'RAKBank',
-    tag: 'Retail-focused UAE banking',
+    name: 'Aircall',
+    tag: 'Cloud-based contact centre phone system',
     works: [
-      'Clean, user-friendly interface consistently praised in app reviews',
-      'Smooth core banking tasks — balance checks, transfers, bill payments all work without friction',
-      'Invested in AI-powered digital transformation — reduced compliance processing significantly and introduced an AI assistant in the mobile app',
+      'Modern, easy-to-deploy cloud telephony with minimal IT overhead — teams are live within days',
+      'Strong CRM and helpdesk integrations (Salesforce, HubSpot, Zendesk) that surface customer context during calls',
+      'Clean, intuitive agent UI with real-time call monitoring, whispering, and live queue dashboards',
     ],
     gaps: [
-      "Card management is weak — users can't easily see or manage multiple debit cards or set card priority within the app",
-      'No meaningful spending insights or financial wellness tools',
-      'Limited features compared to larger UAE banks',
+      'No native WhatsApp or messaging channel — voice-only by design, requiring third-party tools for any chat coverage',
+      'No shared conversation timeline across channels — agents switching from chat to voice lose full context',
+      'Analytics are call-centric; there is no unified SLA reporting that spans messaging and voice together',
     ],
   },
   {
-    name: 'FAB',
-    tag: "UAE's largest full-service bank",
+    name: 'Genesys',
+    tag: 'Enterprise omnichannel contact centre platform',
     works: [
-      "UAE's largest bank, consistently ranked safest bank in the UAE and Middle East by Global Finance",
-      '2026 app update introduced refreshed interface, faster login, better biometrics, and a Quick Actions dashboard',
-      'Strong institutional trust and wide product range',
+      'Comprehensive omnichannel routing across voice, email, chat, and social — all configurable from a single admin console',
+      'AI-powered predictive routing and bot integrations reduce handle time and improve first-contact resolution',
+      'Robust workforce management tools including scheduling, forecasting, and real-time adherence monitoring',
     ],
     gaps: [
-      'Charges lack transparency — users report unexplained deductions with no clear breakdown in the app',
-      'Supplementary cards not visible in the app — a basic feature gap that frustrates users',
-      'Weak spending intelligence and no proactive financial insights',
+      'High implementation cost and lengthy setup — mid-market teams often take 6–12 months to go fully live',
+      'Agent workspace is dense and overwhelming; new agents require weeks of training before reaching baseline efficiency',
+      'WhatsApp Business integration requires additional licensing and configuration, adding friction to a channel that should be native',
     ],
   },
 ]
@@ -389,7 +389,7 @@ export default function CaseStudyOmnichannel() {
             Competitive Landscape
           </h2>
           <p style={{ fontSize: '.9rem', lineHeight: 1.85, color: 'var(--muted)', marginBottom: 40, maxWidth: 780 }}>
-            Benchmarking the UAE retail banking digital experience revealed a consistent pattern: strong core functionality with persistent gaps in card management, transparency, and proactive financial intelligence.
+            Benchmarking the leading contact centre platforms revealed a consistent gap: strong per-channel tools with no true conversation continuity across voice and messaging — the exact problem this product was built to solve.
           </p>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
             {COMPETITOR_BANKS.map(({ name, tag, works, gaps }) => (
