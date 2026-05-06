@@ -1,28 +1,29 @@
 import { useEffect } from 'react'
 import Cursor from '../components/Cursor'
 
-/* ─── IMAGES (Figma assets) ──────────────────────────────── */
+/* ─── IMAGES ─────────────────────────────────────────────── */
 
-const IMG_HERO        = 'https://www.figma.com/api/mcp/asset/b583811a-529a-4693-a949-59014186daee'
-const IMG_WORKSPACE   = 'https://www.figma.com/api/mcp/asset/a978faf3-bfdf-400d-8840-ed38e5590ff0'
-const IMG_VOICE       = 'https://www.figma.com/api/mcp/asset/c469d8d4-757d-442e-865d-a60901a4530b'
-const IMG_INBOX       = 'https://www.figma.com/api/mcp/asset/8224d701-5854-4316-9376-67d2658c9acc'
-const IMG_SORTING     = 'https://www.figma.com/api/mcp/asset/eca310c5-54af-47bc-be9c-4d880629a3dc'
-const IMG_EMPTY       = 'https://www.figma.com/api/mcp/asset/b21d7fb8-dd93-4eb4-a466-6b964b304e26'
-const IMG_TEMPLATES   = 'https://www.figma.com/api/mcp/asset/12533344-72fa-43e0-9fa8-41392bdf90cd'
-const IMG_WA_TMPLS    = 'https://www.figma.com/api/mcp/asset/ac879b75-213a-414c-8108-77eb8e4e6d4d'
-const IMG_STATUSES    = 'https://www.figma.com/api/mcp/asset/537e306a-7b4c-4b59-bee4-d97042535817'
-const IMG_MEDIA       = 'https://www.figma.com/api/mcp/asset/5c2066f9-6b59-4d3a-95db-7dbb31f558f4'
-const IMG_TAGS        = 'https://www.figma.com/api/mcp/asset/cafd80df-32d9-4c3a-9dd6-278ea00162c4'
-const IMG_NOTES       = 'https://www.figma.com/api/mcp/asset/f40503b9-2ef5-4f79-a4f2-86557ab8f1c9'
-const IMG_PROFILE     = 'https://www.figma.com/api/mcp/asset/4898c20f-ddaa-47bb-b97f-0609936c4ac7'
-const IMG_TIMELINE    = 'https://www.figma.com/api/mcp/asset/7e48cd00-bca6-478c-8a10-c369f0efc2c3'
-const IMG_DOCS        = 'https://www.figma.com/api/mcp/asset/56661c90-b5c8-43f8-9365-5d7aa1ff3d5f'
-const IMG_FILTER_1    = 'https://www.figma.com/api/mcp/asset/90d4d38e-89b8-486f-88ab-970c84ad3364'
-const IMG_FILTER_2    = 'https://www.figma.com/api/mcp/asset/fdbe58fb-92de-4bac-a23e-8cc67dd1f3a3'
-const IMG_FILTER_3    = 'https://www.figma.com/api/mcp/asset/b6df5536-e242-4728-ae92-d0f49dcbdffe'
-const IMG_FILTER_4    = 'https://www.figma.com/api/mcp/asset/577f2208-fe9b-4742-96c8-55828e25e9b9'
-const IMG_FILTER_5    = 'https://www.figma.com/api/mcp/asset/2d97063d-c3cb-404c-a66a-739c31835deb'
+const B = import.meta.env.BASE_URL
+const IMG_HERO        = `${B}images/wa-thumb.png`
+const IMG_WORKSPACE   = `${B}images/oc-voice-1.png`
+const IMG_VOICE       = `${B}images/oc-voice-2.png`
+const IMG_INBOX       = `${B}images/oc-inbox-2.png`
+const IMG_SORTING     = `${B}images/oc-inbox-new.png`
+const IMG_EMPTY       = `${B}images/oc-empty-state.png`
+const IMG_TEMPLATES   = `${B}images/oc-templates.png`
+const IMG_WA_TMPLS    = `${B}images/oc-contact-2.png`
+const IMG_STATUSES    = `${B}images/oc-statuses.png`
+const IMG_MEDIA       = `${B}images/oc-contact-3.png`
+const IMG_TAGS        = `${B}images/oc-contact-1.png`
+const IMG_NOTES       = `${B}images/oc-proto-contact.png`
+const IMG_PROFILE     = `${B}images/oc-contact-2.png`
+const IMG_TIMELINE    = `${B}images/oc-proto-5.png`
+const IMG_DOCS        = `${B}images/oc-proto-6.png`
+const IMG_FILTER_1    = `${B}images/oc-filter-1.png`
+const IMG_FILTER_2    = `${B}images/oc-filter-2.png`
+const IMG_FILTER_3    = `${B}images/oc-filter-3.png`
+const IMG_FILTER_4    = `${B}images/oc-filter-4.png`
+const IMG_FILTER_5    = `${B}images/oc-filter-1.png`
 
 /* ─── DATA ────────────────────────────────────────────────── */
 
@@ -597,14 +598,18 @@ export default function CaseStudyOmnichannel() {
                       <h3 style={{ fontFamily: '"Cormorant Garamond",Georgia,serif', fontSize: 'clamp(1.2rem,2vw,1.8rem)', fontWeight: 300, lineHeight: 1.2, color: 'var(--white)', marginBottom: 16 }}>{title}</h3>
                       <p style={{ fontSize: '.87rem', lineHeight: 1.8, color: 'var(--muted)', margin: 0 }}>{desc}</p>
                     </div>
-                    <div style={{ borderRadius: 12, overflow: 'hidden', border: '1px solid var(--bdr2)', background: 'var(--s1)' }}>
-                      <img src={img} alt={title} style={{ width: '100%', display: 'block', objectFit: 'contain' }} />
+                    <div style={{ display: 'flex', justifyContent: 'center' }}>
+                      <div style={{ borderRadius: 20, overflow: 'hidden', border: '1px solid var(--bdr2)', background: 'var(--s1)', maxWidth: 300, width: '100%' }}>
+                        <img src={img} alt={title} style={{ width: '100%', display: 'block', objectFit: 'contain' }} />
+                      </div>
                     </div>
                   </>
                 ) : (
                   <>
-                    <div style={{ borderRadius: 12, overflow: 'hidden', border: '1px solid var(--bdr2)', background: 'var(--s1)' }}>
-                      <img src={img} alt={title} style={{ width: '100%', display: 'block', objectFit: 'contain' }} />
+                    <div style={{ display: 'flex', justifyContent: 'center' }}>
+                      <div style={{ borderRadius: 20, overflow: 'hidden', border: '1px solid var(--bdr2)', background: 'var(--s1)', maxWidth: 300, width: '100%' }}>
+                        <img src={img} alt={title} style={{ width: '100%', display: 'block', objectFit: 'contain' }} />
+                      </div>
                     </div>
                     <div>
                       <div style={{ fontSize: '.6rem', fontWeight: 500, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 12 }}>Feature {String(i + 1).padStart(2, '0')}</div>
@@ -631,7 +636,7 @@ export default function CaseStudyOmnichannel() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 20 }}>
             {CONTACTS_SCREENS.map(({ label, img }) => (
               <div key={label} style={{ display: 'flex', flexDirection: 'column', gap: 10, alignItems: 'center' }}>
-                <div style={{ width: '100%', borderRadius: 12, overflow: 'hidden', border: '1px solid var(--bdr2)', background: 'var(--s1)' }}>
+                <div style={{ maxWidth: 240, width: '100%', borderRadius: 20, overflow: 'hidden', border: '1px solid var(--bdr2)', background: 'var(--s1)' }}>
                   <img src={img} alt={label} style={{ width: '100%', display: 'block', objectFit: 'contain' }} />
                 </div>
                 <span style={{ fontSize: '.6rem', fontWeight: 500, letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--muted)' }}>{label}</span>
@@ -650,16 +655,16 @@ export default function CaseStudyOmnichannel() {
               Multi-criteria filtering lets agents quickly surface the right conversations — by status, channel, agent, tag, date range, and priority.
             </p>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 20 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 20, justifyItems: 'center' }}>
             {FILTER_SCREENS.slice(0, 3).map((img, i) => (
-              <div key={i} style={{ borderRadius: 12, overflow: 'hidden', border: '1px solid var(--bdr2)', background: 'var(--s1)' }}>
+              <div key={i} style={{ maxWidth: 280, width: '100%', borderRadius: 20, overflow: 'hidden', border: '1px solid var(--bdr2)', background: 'var(--s1)' }}>
                 <img src={img} alt={`Filter view ${i + 1}`} style={{ width: '100%', display: 'block', objectFit: 'contain' }} />
               </div>
             ))}
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20, marginTop: 20, maxWidth: 740, margin: '20px auto 0' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20, marginTop: 20, maxWidth: 600, margin: '20px auto 0', justifyItems: 'center' }}>
             {FILTER_SCREENS.slice(3).map((img, i) => (
-              <div key={i} style={{ borderRadius: 12, overflow: 'hidden', border: '1px solid var(--bdr2)', background: 'var(--s1)' }}>
+              <div key={i} style={{ maxWidth: 280, width: '100%', borderRadius: 20, overflow: 'hidden', border: '1px solid var(--bdr2)', background: 'var(--s1)' }}>
                 <img src={img} alt={`Filter view ${i + 4}`} style={{ width: '100%', display: 'block', objectFit: 'contain' }} />
               </div>
             ))}
